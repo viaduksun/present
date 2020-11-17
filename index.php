@@ -1,0 +1,305 @@
+<?php
+	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php"
+?>
+        <!-- slider-section-start -->
+        <section class="slider-main-area">
+            <div class="main-slider an-si">
+                <div class="bend niceties preview-2 hm-ver-1">
+                    <div id="ensign-nivoslider-2" class="slides">	
+                        <img src="/img/slider/1.png" alt="" title="#slider-direction-3"  />
+                        <img src="/img/slider/2.png" alt="" title="#slider-direction-1"  />
+                    </div>
+                    <!-- direction 1 -->
+                    <div id="slider-direction-3" class="t-cn slider-direction Builder">
+                        <div class="slide-all">
+                            <!-- layer 1 -->
+                            <div class="layer-1">
+                                <h2 class="title5">новые виды товаров</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <h2 class="title6">Подарки на любой вкус</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <p class="title0">сэкономьте до 40%</p>
+                            </div>
+                            <!-- layer 3 -->
+                            <div class="layer-3">
+                                <a class="min1" href="#">Товары</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider-direction-1" class="t-cn slider-direction Builder">
+                        <div class="slide-all slide2">
+                            <!-- layer 1 -->
+                            <div class="layer-1">
+                                <h2 class="title5">горячие новинки</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <h2 class="title6">Подарки для близких</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <p class="title0">Лучшая цена на рынке</p>
+                            </div>
+                            <!-- layer 3 -->
+                            <div class="layer-3">
+                                <a class="min1" href="#">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+			    </div>
+            </div>
+        </section>
+		<!-- slider section end -->
+        <!-- new-products section start -->
+		<section class="featured-products single-products section-padding-top section-padding-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-title">
+							<h3>Рекомендованные товары</h3>
+							<div class="section-icon">
+                                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="product-tab nav nav-tabs">
+							<ul>                                        
+								<li class="active"><a data-toggle="tab" href="#all">все</a></li>
+								<li><a data-toggle="tab" href="#clothings">рамки</a></li>
+								<li><a data-toggle="tab" href="#shoes">картины</a></li>
+								<li><a data-toggle="tab" href="#bags">пазлы</a></li>
+								<li><a data-toggle="tab" href="#accessories">магниты</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row tab-content">
+					<div class="tab-pane  fade in active" id="all">
+						<div id="tab-carousel-1" class="re-owl-carousel owl-carousel product-slider owl-theme">
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
+							<?php
+							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+							?>
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						</div>
+					</div>
+					<!-- all shop product end -->
+
+					<div class="tab-pane  fade in" id="clothings">
+						<div id="tab-carousel-2" class="owl-carousel product-slider owl-theme">
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
+							<?php
+							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+							?>
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+							<!-- single product end -->
+						</div>
+					</div>
+					<!-- clothings product end -->
+					<div class="tab-pane  fade in" id="shoes">
+						<div id="tab-carousel-3" class="owl-carousel product-slider owl-theme">
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
+							<?php
+							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+							?>
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+							<!-- single product end -->
+						</div>
+					</div>
+					<!-- shoes product end -->
+					<div class="tab-pane  fade in" id="bags">
+						<div id="tab-carousel-4" class="owl-carousel product-slider owl-theme">
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
+							<?php
+							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+							?>
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+							<!-- single product end -->
+						</div>
+					</div>
+					<!-- bags product end -->
+					<div class="tab-pane  fade in" id="accessories">
+						<div id="tab-carousel-5" class="owl-carousel product-slider owl-theme">
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
+							<?php
+							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+							?>
+							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						</div>
+					</div>
+					<!-- accessories product end -->
+				</div>
+			</div>
+		</section>
+		<!-- new-products section end -->
+        <!-- testimonials section start -->
+		<section class="testimonials stripe-parallax-bg" data-parallax-speed="0.5">
+			<div class="re-testimonials re-testimonials2">
+                <div class="container">
+                    <div class="row">
+                        <div class="re-testimonials-all re-owl-carousel2">
+									 <!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
+									<div class="re-testimonials-all-slider">
+                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                    <div class="sale-curosel1">
+                                        <div class="product-img">
+                                           <div class="pro-type">
+                                                <span>sale</span>
+                                            </div>
+                                            <a href="#">
+                                                <img alt="Product Title" src="/img/products/10.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-xs-12">
+                                    <div class="product-content">
+                                        <div class="re-text">
+                                            <h5><a href="#">Etiam molestie</a></h5>
+                                        </div>
+                                        <div class="pro-rating">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <!-- <a href="#"><i class="fa fa-star-o"></i></a> -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.</p>
+                                        <span class="old-price">230.00 ГРН</span>
+                                        <span class="pro-price">200. ГРН</span>
+                                        <div class="timer">
+                                            <div data-countdown="2020/12/12"></div>
+                                        </div>														
+                                    </div>
+                                </div>
+									 </div>
+									 <!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+       <!-- testimonials section end -->
+        <!-- brand section start -->
+       <section>
+           <div class="brand-logo">
+				<div class="barnd-bg">
+					<div class="container">
+						<div class="row text-center">
+							<div id="brand-logo" class="re-owl-carousel21 owl-carousel product-slider owl-theme">
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/1.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/2.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/3.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/4.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/5.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/6.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/1.png" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="single-brand">
+										<a href="#"><img src="/img/brand/3.png" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+       </section>
+		 <!-- brand section end -->
+		  
+		 <!-- testimonials section start -->
+		<section class="testimonials stripe-parallax-bg" data-parallax-speed="0.5">
+			<div class="re-testimonials">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="section-title re-section-title">
+                                <h3>TESTIMONIALS</h3>
+                                <div class="section-icon re-section1">
+                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-text-center text-center">
+                            <div id="testimonials" class="re-owl-carousel2 owl-carousel product-slider owl-theme">
+                                <div class="single-testimonial">
+                                    <div class="testimonial-dsc">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore magna aliqua. <br>Ut enim ad minim  veniam, quis nostrud exercitation ullamco  laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                    <div class="testimonial-img">
+                                        <a href="#"><img src="/img/testimonial/1.png" alt="Title" /></a>
+                                        <h4><a href="#">Raymond Morales</a></h4>
+                                        <span>chairman</span>
+                                    </div>
+                                </div>
+                                <!-- single testimonial item end -->
+                                <div class="single-testimonial">
+                                    <div class="testimonial-dsc">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                    <div class="testimonial-img">
+                                        <a href="#"><img src="/img/testimonial/2.png" alt="Title" /></a>
+                                        <h4><a href="#">Raymond Morales</a></h4>
+                                        <span>chairman</span>
+                                    </div>
+                                </div>
+                                <!-- single testimonial item end -->
+                                <div class="single-testimonial">
+                                    <div class="testimonial-dsc">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                    <div class="testimonial-img">
+                                        <a href="#"><img src="/img/testimonial/3.png" alt="Title" /></a>
+                                        <h4><a href="#">Raymond Morales</a></h4>
+                                        <span>chairman</span>
+                                    </div>
+                                </div>
+                                <!-- single testimonial item end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+       <!-- testimonials section end -->
+<?php
+	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
+?>
