@@ -6,8 +6,8 @@
             <div class="main-slider an-si">
                 <div class="bend niceties preview-2 hm-ver-1">
                     <div id="ensign-nivoslider-2" class="slides">	
-                        <img src="/img/slider/1.png" alt="" title="#slider-direction-3"  />
-                        <img src="/img/slider/2.png" alt="" title="#slider-direction-1"  />
+                        <img src="/img/slider/3.jpg" alt="" title="#slider-direction-3"  />
+                        <img src="/img/slider/4.jpg" alt="" title="#slider-direction-1"  />
                     </div>
                     <!-- direction 1 -->
                     <div id="slider-direction-3" class="t-cn slider-direction Builder">
@@ -62,8 +62,8 @@
 						<div class="section-title">
 							<h3>Рекомендованные товары</h3>
 							<div class="section-icon">
-                                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                            </div>
+								<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@
                                                 <span>sale</span>
                                             </div>
                                             <a href="#">
-                                                <img alt="Product Title" src="/img/products/10.jpg">
+                                                <img alt="Product Title" src="/img/products/2.jpg">
                                             </a>
                                         </div>
                                     </div>
@@ -214,45 +214,51 @@
 				<div class="barnd-bg">
 					<div class="container">
 						<div class="row text-center">
+							<div class="section-title">
+								<h3>МЫ СОТРУДНИЧАЕМ</h3>
+								<div class="section-icon">
+									<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+								</div>
+							</div>
 							<div id="brand-logo" class="re-owl-carousel21 owl-carousel product-slider owl-theme">
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/1.png" alt="" /></a>
+										<img src="/img/brand/1.png" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/2.png" alt="" /></a>
+										<img src="/img/brand/2.jpg" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/3.png" alt="" /></a>
+										<img src="/img/brand/3.jpg" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/4.png" alt="" /></a>
+										<img src="/img/brand/4.png" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/5.png" alt="" /></a>
+										<img src="/img/brand/5.jpg" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/6.png" alt="" /></a>
+										<img src="/img/brand/6.jpg" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/1.png" alt="" /></a>
+										<img src="/img/brand/7.jpg" alt="" />
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="/img/brand/3.png" alt="" /></a>
+										<img src="/img/brand/8.jpg" alt="" />
 									</div>
 								</div>
 							</div>
@@ -270,7 +276,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="section-title re-section-title">
-                                <h3>TESTIMONIALS</h3>
+                                <h3>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h3>
                                 <div class="section-icon re-section1">
                                     <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
                                 </div>
@@ -282,34 +288,35 @@
                             <div id="testimonials" class="re-owl-carousel2 owl-carousel product-slider owl-theme">
                                 <div class="single-testimonial">
                                     <div class="testimonial-dsc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore magna aliqua. <br>Ut enim ad minim  veniam, quis nostrud exercitation ullamco  laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <p>Заказывал подарок для своей девушки, она осталась очень довольна, бокс как и подарки в нем отличного качества.
+													Классный проект, желаю вам процветания и побольше заказов!</p>
                                     </div>
                                     <div class="testimonial-img">
-                                        <a href="#"><img src="/img/testimonial/1.png" alt="Title" /></a>
-                                        <h4><a href="#">Raymond Morales</a></h4>
-                                        <span>chairman</span>
+                                        <a href="#"><img src="/img/testimonial/01.jpg" alt="Title" /></a>
+                                        <h4><a href="#">Валерий Крещенко</a></h4>
+                                        <span>Бокс косметики</span>
                                     </div>
                                 </div>
                                 <!-- single testimonial item end -->
                                 <div class="single-testimonial">
                                     <div class="testimonial-dsc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <p>Замовляла дитині футболку "Странные вещи". Дуже привітний менеджер спілкувався. Обслуговування на вищому рівні. Дякуємо разом з донечкою!!! Успіхів ВАм та побільше вдячних клієнтів. Будемо замовляти ще. P.S. якби у всіх магазинах так обслуговували.</p>
                                     </div>
                                     <div class="testimonial-img">
-                                        <a href="#"><img src="/img/testimonial/2.png" alt="Title" /></a>
-                                        <h4><a href="#">Raymond Morales</a></h4>
-                                        <span>chairman</span>
+                                        <a href="#"><img src="/img/testimonial/02.jpg" alt="Title" /></a>
+                                        <h4><a href="#">Анастастия Панова</a></h4>
+                                        <span>Подарок для ребенка</span>
                                     </div>
                                 </div>
                                 <!-- single testimonial item end -->
                                 <div class="single-testimonial">
                                     <div class="testimonial-dsc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <p>Заказывала бокс Гарри Поттера для дочки, это просто бомбический подарок!!! Ребёнок остался в лёгком шоке от этой красоты, упаковка наполнение, волшебная палочка)) Спасибо большое ребятам, за классные идеи для подарков, вы лучшие!</p>
                                     </div>
                                     <div class="testimonial-img">
                                         <a href="#"><img src="/img/testimonial/3.png" alt="Title" /></a>
-                                        <h4><a href="#">Raymond Morales</a></h4>
-                                        <span>chairman</span>
+                                        <h4><a href="#">Михаил Мономаков</a></h4>
+                                        <span>Новогодний подарок</span>
                                     </div>
                                 </div>
                                 <!-- single testimonial item end -->

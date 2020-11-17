@@ -16,7 +16,7 @@
         </section>
 		<!-- pages-title-end -->
 		<!-- shop-style content section start -->
-		<section class="pages products-page section-padding-top">
+		<section class="pages products-page section-padding-top section-padding-bottom">
 			<div class="container">
 				<div class="row">
 				    <div class="col-md-4 col-lg-3 col-sm-12">
