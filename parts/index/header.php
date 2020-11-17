@@ -46,6 +46,8 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+		  
+
         <!-- header section start -->
 		<header>
 			<div class="header-top">
@@ -76,7 +78,7 @@
 					<div class="row">
 						<div class="col-sm-2 col-md-2 col-xs-4">
 							<div class="logo">
-								<a href="/"><img src="/img/logo2.png" alt="" /></a>
+								<a href="/"><img src="/img/logo2.png" alt="" style="height: 64px;"/></a>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-10 col-xs-8 static">

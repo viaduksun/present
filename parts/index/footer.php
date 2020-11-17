@@ -6,22 +6,22 @@
 						<div class="col-xs-12 col-sm-4">
 							<div class="single-service">
 								<i class="pe-7s-plane"></i>
-								<h4>Free Shipping</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<h4>Бесплатная доставка</h4>
+								<p>При заказе свыше 500 грн. доставка БЕСПЛАТНАЯ. Мы всегда идем на встречу нашим клиентам!</p>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4">
 							<div class="single-service res-single">
 								<i class="pe-7s-headphones"></i>
-								<h4>Customer Support</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<h4>Служба поддержки</h4>
+								<p>Если в онлайн-справке нет нужной информации, свяжитесь с нашей службой поддержки пользователей. Мы обязательно решим вашу проблему.</p>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4">
 							<div class="single-service">
 								<i class="pe-7s-refresh"></i>
-								<h4>15 days money back</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<h4>Возврат средств при ненадлежащем качестве</h4>
+								<p>Gift Hub вернет вам деньги, если Ваш товар будет ненадлежащего качества или утреян при доставке.</p>
 							</div>
 						</div>
 					</div>
@@ -46,18 +46,15 @@
 										<ul>
 											<li>
 												<i class="pe-7s-map-marker"></i>
-												<p>My Company, 45 Puffin Street 1245</p>
-												<p class="rs">Poffinville France.</p>
+												<p> Черкассы, ул. Крещатик 122</p>
 											</li>
 											<li>
 												<i class="pe-7s-call"></i>
-												<p>+201 (987) 6641 053</p>
-												<p>+202 (987) 6641 056</p>
+												<p>+38 (093) 253 23 53</p>
 											</li>
 											<li>
 												<i class="pe-7s-mail-open"></i>
 												<p>info@domainname.com</p>
-												<p>company@outlook.com</p>
 											</li>
 										</ul>
 									</div>
@@ -73,6 +70,7 @@
 										<ul>
 											<li><a href="/pages/login.php">Мой аккаунт</a></li>
 											<li><a href="/pages/cart.php">Корзина</a></li>
+											<li><a href="/">Вернуться на главную</a></li>
 										</ul>
 									</div>
 								</div>
@@ -85,7 +83,9 @@
 									</div>
 									<div class="footer-menu">
 										<ul>
+											<li><a href="/pages/shop.php">Товары</a></li>
 											<li><a href="/pages/contact.php">Контакты</a></li>
+											<li><a href="/pages/about-us.php">О нас</a></li>
 										</ul>
 									</div>
 								</div>
@@ -93,11 +93,11 @@
 							<div class="col-xs-12 hidden-sm col-md-3 margin-top">
 								<div class="single-text res-text">
 									<div class="footer-title">
-										<h4>ПОЛИТИКА</h4>
+										<h4>Девиз</h4>
 										<hr class="dubble-border"/>
 									</div>
 									<div class="footer-text">
-										<p>Lorem ipsum dolor sit amet, consectetures do adipisicing elit, sed do eiusmod tempores incididunt ut labore</p>
+										<p>Доставляйте радость своим родным с помощью красивого подарка</p>
 									</div>
 								</div>
 							</div>
@@ -149,7 +149,6 @@
 			<!-- footer-bottom area end -->
 		</footer>
         <!-- footer section end -->
-        
 		<!-- all js here -->
 		<!-- jquery latest version -->
         <script src="/js/vendor/jquery-1.12.0.min.js"></script>
@@ -176,6 +175,27 @@
 		<!-- plugins js -->
         <script src="/js/plugins.js"></script>
 		<!-- main js -->
-        <script src="/js/main.js"></script>
+		  <script src="/js/main.js"></script>
+		  
+		  <!-- HelloPreload http://hello-site.ru/preloader/ -->
+		<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #BE90D4 url(http://hello-site.ru//main/images/preloads/hearts.svg) center center no-repeat;background-size:180px;}</style>
+		<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+		<script type="text/javascript">
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader)
+					;hellopreloader.style.display = "none";}
+					},16);}
+					window.onload = function(){setTimeout(function(){
+						fadeOutnojquery(hellopreloader);
+						},700);
+		};
+		</script> -->
+		<!-- HelloPreload http://hello-site.ru/preloader/ -->
     </body>
 </html>
+
