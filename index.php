@@ -26,7 +26,7 @@
                             </div>
                             <!-- layer 3 -->
                             <div class="layer-3">
-                                <a class="min1" href="#">Товары</a>
+                                <a class="min1" href="/pages/shop.php">Товары</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             </div>
                             <!-- layer 3 -->
                             <div class="layer-3">
-                                <a class="min1" href="#">Заказать</a>
+                                <a class="min1" href="/pages/shop.php">Заказать</a>
                             </div>
                         </div>
                     </div>
@@ -84,9 +84,11 @@
 					<div class="tab-pane  fade in active" id="all">
 						<div id="tab-carousel-1" class="re-owl-carousel owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-							<?php
-							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
+							<div class="col-xs-12">	
+								<?php
+									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+								?>
+							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 						</div>
 					</div>
@@ -95,9 +97,11 @@
 					<div class="tab-pane  fade in" id="clothings">
 						<div id="tab-carousel-2" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-							<?php
-							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
+							<div class="col-xs-12">	
+								<?php
+									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+								?>
+							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
 						</div>
@@ -106,9 +110,11 @@
 					<div class="tab-pane  fade in" id="shoes">
 						<div id="tab-carousel-3" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-							<?php
-							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
+							<div class="col-xs-12">	
+								<?php
+									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+								?>
+							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
 						</div>
@@ -117,9 +123,11 @@
 					<div class="tab-pane  fade in" id="bags">
 						<div id="tab-carousel-4" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-							<?php
-							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
+							<div class="col-xs-12">	
+								<?php
+									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+								?>
+							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
 						</div>
@@ -128,9 +136,11 @@
 					<div class="tab-pane  fade in" id="accessories">
 						<div id="tab-carousel-5" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-							<?php
-							include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
+							<div class="col-xs-12">	
+								<?php
+									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+								?>
+							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 						</div>
 					</div>

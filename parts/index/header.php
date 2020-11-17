@@ -85,10 +85,10 @@
 							    <div class="mainmenu clearfix hidden-sm hidden-xs">
                                     <nav>
                                         <ul>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="about-us.html">About</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="index.html">Главная</a></li>
+                                            <li><a href="/pages/shop.php">Магазин</a></li>
+                                            <li><a href="/pages/about-us.php">Про нас</a></li>
+                                            <li><a href="/pages/contact.php">Контакты</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -97,10 +97,10 @@
                                     <div class="mobile-menu">
                                         <nav id="dropdown">
                                             <ul>
-                                                <li><a href="index.html">Home</a></li>
-																<li><a href="shop.html">Shop</a></li>
-                                                <li><a href="about-us.html">About</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
+														  <li><a href="index.html">Главная</a></li>
+                                            <li><a href="/pages/shop.php">Магазин</a></li>
+                                            <li><a href="/pages/about-us.php">Про нас</a></li>
+                                            <li><a href="/pages/contact.php">Контакты</a></li>
                                             </ul>
                                         </nav>
                                     </div>
