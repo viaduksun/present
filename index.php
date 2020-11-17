@@ -85,9 +85,11 @@
 						<div id="tab-carousel-1" class="re-owl-carousel owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
 							<div class="col-xs-12">	
-								<?php
-									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-								?>
+								<div class="single-product">
+									<?php
+										include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+									?>
+								</div>
 							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 						</div>
@@ -98,9 +100,11 @@
 						<div id="tab-carousel-2" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
 							<div class="col-xs-12">	
-								<?php
-									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-								?>
+								<div class="single-product">
+									<?php
+										include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+									?>
+								</div>
 							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
@@ -111,9 +115,11 @@
 						<div id="tab-carousel-3" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
 							<div class="col-xs-12">	
-								<?php
-									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-								?>
+								<div class="single-product">
+									<?php
+										include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+									?>
+								</div>
 							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
@@ -124,9 +130,11 @@
 						<div id="tab-carousel-4" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
 							<div class="col-xs-12">	
-								<?php
-									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-								?>
+								<div class="single-product">
+									<?php
+										include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+									?>
+								</div>
 							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 							<!-- single product end -->
@@ -137,9 +145,11 @@
 						<div id="tab-carousel-5" class="owl-carousel product-slider owl-theme">
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
 							<div class="col-xs-12">	
-								<?php
-									include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-								?>
+								<div class="single-product">
+									<?php
+										include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
+									?>
+								</div>
 							</div>
 							<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
 						</div>

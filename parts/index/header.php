@@ -62,10 +62,9 @@
 						<div class="col-md-6 col-sm-8">
 							<div class="right-header">
 								<ul>
-									<li><a href="my-account.html"><i class="fa fa-user"></i>Моя страница</a></li>
-									<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Корзина</a></li>
-									<li><a href="wishlist.html"><i class="fa fa-heart"></i>Желания</a></li>
-									<li><a href="login.html"><i class="fa fa-lock"></i>Войти</a></li>
+									<li><a href="/pages/my-account.php"><i class="fa fa-user"></i>Моя страница</a></li>
+									<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i>Корзина</a></li>
+									<li><a href="/pages/login.php"><i class="fa fa-lock"></i>Войти</a></li>
 								</ul>
 							</div>
 						</div>
@@ -77,7 +76,7 @@
 					<div class="row">
 						<div class="col-sm-2 col-md-2 col-xs-4">
 							<div class="logo">
-								<a href="index.html"><img src="/img/logo2.png" alt="" /></a>
+								<a href="/"><img src="/img/logo2.png" alt="" /></a>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-10 col-xs-8 static">

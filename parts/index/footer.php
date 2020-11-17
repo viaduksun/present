@@ -1,5 +1,5 @@
 <!-- service section start -->
-<section class="re-section-padding">
+<section class="re-section-padding my-grey-bg">
 			<div class="service section-padding">
 				<div class="container">
 					<div class="row text-center">
@@ -71,9 +71,8 @@
 									</div>
 									<div class="footer-menu">
 										<ul>
-											<li><a href="login.html">Мой аккаунт</a></li>
-											<li><a href="wishlist.html">Желания</a></li>
-											<li><a href="order-complete">Корзина</a></li>
+											<li><a href="/pages/login.php">Мой аккаунт</a></li>
+											<li><a href="/pages/cart.php">Корзина</a></li>
 										</ul>
 									</div>
 								</div>
@@ -86,7 +85,7 @@
 									</div>
 									<div class="footer-menu">
 										<ul>
-											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="/pages/contact.php">Контакты</a></li>
 										</ul>
 									</div>
 								</div>

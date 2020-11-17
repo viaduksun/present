@@ -1379,6 +1379,9 @@ a.dec.qtybutton {padding-top: 3px;}
 	width: 30px;
 }
 /* service area */
+.my-grey-bg{
+	background-color: #eeeeee;
+}
 .single-service i {
     border: 1px solid #666;
     border-radius: 50%;
@@ -1667,7 +1670,7 @@ hr.dubble-border {margin: 0;}
   margin-bottom: 50px;
 }
 .single-product.s-top {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .all-shop-sidebar, .single-sidebar {
   overflow: hidden;
@@ -2622,6 +2625,9 @@ textarea.input-text:focus, .checkout-coupon.top > input:focus, .checkout-coupon.
     margin: 2em 0;
     padding: 20px;
 }
+.my-table{
+	width: 100%;
+}
 .coupon-checkout-content.tnm{
     display: none;
 }
@@ -2895,11 +2901,11 @@ p.checkout-coupon input[type="submit"]:hover,  .cop-left input[type="submit"]:ho
 }
 .ro-checkout-summary .ro-body .ro-item {
     font-size: 14px;
-    padding: 40px 0 0;
+    padding: 10px 0 0;
 }
 .ro-checkout-summary .ro-body .ro-item .ro-image {
     float: left;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     width: 25%;
 }
 .ro-checkout-summary .ro-body .ro-item > div:nth-of-type(2) {
@@ -2946,7 +2952,7 @@ p.checkout-coupon input[type="submit"]:hover,  .cop-left input[type="submit"]:ho
     width: 100%;
 }
 .ro-checkout-summary .ro-footer > div:last-of-type {
-    background-color: #ffffff;
+
     padding: 30px 35px;
 }
 .ro-checkout-summary .ro-footer > div.shipping > p {
@@ -4679,3 +4685,8 @@ h2.page-title {
 /*====================================================================
 							[ END ]
 ======================================================================*/
+
+.my-margin-bottom-0{
+	margin-bottom: 0!important;
+}
+/* .my_padding_bo */
