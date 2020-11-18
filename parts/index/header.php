@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Tasnm  || Home Version Two</title>
+        <title>Gift-Hub</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- favicon
 		============================================ -->		
-        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/img/logo2.png">
 		<!-- google fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- all css here -->
@@ -109,16 +109,11 @@
                                 <!-- mobile menu end -->
                                 <div class="right-header re-right-header">
                                     <ul>
-                                        <li class="re-icon tnm"><i class="fa fa-search" aria-hidden="true"></i>
-                                            <form method="get" id="searchform" action="#">
-                                                <input type="text" value="" name="s" id="ws" placeholder="Search product..." />
-                                                <button type="submit"><i class="pe-7s-search"></i></button>
-                                            </form>
-                                        </li>
                                         <li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
                                             <ul class="drop-cart">
-                                                <li>
-                                                    <a href="/pages/cart.php"><img src="/img/cart/1.png" alt="" /></a>
+																<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
+														  		<li>
+                                                    <a href="/pages/cart.php" style="max-width: 70px;"><img src="/img/products/02.jpg" alt="" /></a>
                                                     <div class="add-cart-text">
                                                         <p><a href="#">White Shirt</a></p>
                                                         <p>$50.00</p>
@@ -128,30 +123,16 @@
                                                     <div class="pro-close">
                                                         <i class="pe-7s-close"></i>
                                                     </div>
-                                                </li>
-                                                <li>
-                                                    <a href="/pages/cart.php"><img src="/img/cart/2.png" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">White Shirt</a></p>
-                                                        <p>$50.00 x 2</p>
-                                                        <span>Color : Blue</span>
-                                                        <span>Size   : SL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
-                                                </li>
+																</li>
+																<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
                                                 <li class="total-amount clearfix">
                                                     <span class="floatleft">total</span>
                                                     <span class="floatright"><strong>= $150.00</strong></span>
                                                 </li>
-                                                <li>
-                                                    <div class="goto text-center">
+                                                <li class="checkout-btn text-center">
+																	 <div class="goto text-center">
                                                         <a href="/pages/cart.php"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
                                                     </div>
-                                                </li>
-                                                <li class="checkout-btn text-center">
-                                                    <a href="/pages/checkout.php">Check out</a>
                                                 </li>
                                             </ul>
                                         </li>

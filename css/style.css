@@ -365,7 +365,7 @@ ul.drop-setting li,.mainmenu ul li ul li {
 .drop-cart img {
     float: left;
     margin-right: 10px;
-    padding: 10px;
+    padding-top: 5px;
 }
 .drop-cart > li {
     border-bottom: 1px solid #e5e5e5 !important;

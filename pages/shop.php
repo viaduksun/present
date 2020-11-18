@@ -56,7 +56,7 @@
                                    <li class="b-none">
                                         <div class="tb-recent-thumbb">
                                             <a href="">
-                                                <img class="attachment" src="/img/products/1.jpg" alt="">
+                                                <img class="attachment" src="/img/products/11.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="tb-recentb">
@@ -71,7 +71,7 @@
                                    <li class="b-none">
                                         <div class="tb-recent-thumbb">
                                             <a href="">
-                                                <img class="attachment" src="/img/products/11.jpg" alt="">
+                                                <img class="attachment" src="/img/products/44.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="tb-recentb">
