@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php"
 ?>
+
 	<!-- slider-section-start -->
 	<section class="slider-main-area">
 		<div class="main-slider an-si">
@@ -54,6 +55,87 @@
 		</div>
 	</section>
 <!-- slider section end -->
+<!-- collection section start -->
+<div class="banner-area">
+            <div class="container">
+                <div class="section-padding1">
+					 	<div class="row">
+							<div class="col-xs-12">
+								<div class="section-title">
+									<h3>Категории</h3>
+									<div class="section-icon">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="banner-container banner-box res-btm">
+                                <a href="#" >
+                                    <img alt="" src="/img/products/46.jpg">
+                                    <div>
+                                        <h2>
+                                            Cамые вкусные!
+                                        </h2>
+                                        <p>Фруктовые боксы. Самые свежие фрукты!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="banner-box banner-box-re">
+                                <a href="#" class="link-height">
+                                    <img alt="" src="/img/products/11.jpg" class="image-center">
+                                    <div>
+                                        <h2>
+                                            Качественные!
+                                        </h2>
+                                        <p>Боксы косметики. Вы оценете!</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-box res-btm">
+                                <a href="#" class="link-height">
+                                    <img alt="" src="/img/products/22.jpg" class="image-center">
+                                    <div>
+                                        <h2>
+                                            Оригинальные и вкусные
+                                        </h2>
+                                        <p>Sweet boxes!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="banner-box banner-box-re">
+                                <a href="#" class="link-height">
+                                    <img alt="" src="/img/products/33.jpg" class="image-center">
+                                    <div>
+                                        <h2>
+                                            Порадуйте вашего ребенка с
+                                        </h2>
+                                        <p>Сюрприз боксом для детей!</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-box">
+                                <a href="#" class="link-height">
+                                    <img alt="" src="/img/products/54.jpg" class="image-center">
+                                    <div>
+                                        <h2>
+                                            Только у нас
+                                        </h2>
+                                        <p>Самые оригинальные флористы составляют flower boxes!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- collection section end -->
 	<!-- new-products section start -->
 <section class="featured-products single-products section-padding-top section-padding-bottom">
 	<div class="container">
@@ -195,40 +277,40 @@
 						<div class="re-testimonials-all re-owl-carousel2">
 								<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
 							<div class="re-testimonials-all-slider">
-									<div class="col-md-4 col-sm-12 col-xs-12">
-										<div class="sale-curosel1">
-												<div class="product-img">
-													<div class="pro-type">
-														<span>sale</span>
-													</div>
-													<a href="#">
-														<img alt="Product Title" src="/img/products/2.jpg">
-													</a>
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<div class="sale-curosel1">
+											<div class="product-img">
+												<div class="pro-type">
+													<span>sale</span>
 												</div>
-										</div>
-									</div>
-									<div class="col-md-8 col-sm-12 col-xs-12">
-										<div class="product-content">
-												<div class="re-text">
-													<h5><a href="#">Etiam molestie</a></h5>
-												</div>
-												<div class="pro-rating">
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<!-- <a href="#"><i class="fa fa-star-o"></i></a> -->
-												</div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.</p>
-												<span class="old-price">230.00 ГРН</span>
-												<span class="pro-price">200. ГРН</span>
-												<div class="timer">
-													<div data-countdown="2020/12/12"></div>
-												</div>														
-										</div>
+												<a href="#">
+													<img alt="Product Title" src="/img/products/2.jpg">
+												</a>
+											</div>
 									</div>
 								</div>
+								<div class="col-md-8 col-sm-12 col-xs-12">
+									<div class="product-content">
+											<div class="re-text">
+												<h5><a href="#">Etiam molestie</a></h5>
+											</div>
+											<div class="pro-rating">
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<!-- <a href="#"><i class="fa fa-star-o"></i></a> -->
+											</div>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.</p>
+											<span class="old-price">230.00 ГРН</span>
+											<span class="pro-price">200. ГРН</span>
+											<div class="timer">
+												<div data-countdown="2020/12/12"></div>
+											</div>														
+									</div>
+								</div>
+							</div>
 								<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
 						</div>
 					</div>

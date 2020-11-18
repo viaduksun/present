@@ -853,7 +853,12 @@ i.pe-7s-back {transform: rotateY(-180deg);}
   overflow: hidden;
 }
 .single-products .product-img {text-align:center;position: relative;}
-.products-page .product-img {text-align:center;position: relative}
+.products-page .product-img {
+	text-align:center;position: relative;
+	overflow: hidden;
+	max-height: 260px;
+	min-height: 260px;
+}
 /* single product actions */
 .actions-btn {
   bottom: 29%;
@@ -4689,4 +4694,12 @@ h2.page-title {
 
 .my-margin-bottom-0{
 	margin-bottom: 0!important;
+}
+
+.link-height{
+	max-height: 250px;
+	overflow: hidden;
+}
+.image-center{
+	margin: -75px 0px 0px 0px;
 }
