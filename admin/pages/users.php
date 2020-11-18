@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="con-text">
-                            <h2 class="page-title">Мой аккаунт</h2>
-                            <p><a href="/admin/">Главная</a></p>
+                            <h2 class="page-title">Аккаунты пользователей</h2>
+                            <p><a href="/admin/">Главная</a> | Аккаунты пользователей</p>
                         </div>
                     </div>
                 </div>
