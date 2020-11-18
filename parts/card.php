@@ -3,7 +3,7 @@
 			<span>new</span>
 		</div>
 		<a href="#">
-			<img src="/img/products/1.jpg" alt="Product Title" />
+			<img src="/img/products/11.jpg" alt="Product Title" />
 			<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
 		</a>
 	</div>
