@@ -4695,3 +4695,11 @@ h2.page-title {
 .my-margin-bottom-0{
 	margin-bottom: 0!important;
 }
+
+.link-height{
+	max-height: 250px;
+	overflow: hidden;
+}
+.image-center{
+	margin: -75px 0px 0px 0px;
+}
