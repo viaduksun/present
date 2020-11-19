@@ -9,6 +9,7 @@
 		<section class="pages products-page section-padding-top section-padding-bottom">
 			<div class="container">
 				<div class="row">
+<<<<<<< Updated upstream
                 <!-- SIDEBAR START -->
 				    <?php
                         include $_SERVER["DOCUMENT_ROOT"] . '/parts/shop/sidebar.php';
@@ -16,6 +17,105 @@
                     <!-- SIDEBAR END -->
 
 
+=======
+				    <div class="col-md-4 col-lg-3 col-sm-12">
+                        <div class="all-shop-sidebar">
+                            <div class="top-shop-sidebar">
+                                <h3 class="wg-title">Поиск</h3>
+                            </div>
+                            <div class="shop-one">
+                                <h3 class="wg-title2">Категории</h3>
+                                <ul class="product-categories">
+											  <!-- ВЫВОДИТЬ КАТЕГОРИИ  -->
+                                    <li class="cat-item">
+													 <a href="#">Рамки</a>
+													 <!-- ПОСЧИТАТЬ СКОЛЬКО ВСЕГО РАМОК -->
+                                        <span class="count">(12)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-one re-shop-one">
+                                <h3 class="wg-title2">Choose Price</h3>
+                                <div class="widget shop-filter">
+                                    <div class="info_widget">
+													<div class="price_filter">
+                                            <div id="slider-range"></div>
+                                            <div id="amount">
+                                                <input type="text" name="first_price" class="first_price" />
+                                                <input type="text" name="last_price" class="last_price"/>
+                                                <button class="button-shop" type="submit"><i class="fa fa-search search-icon"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>							
+                                </div>
+									 </div>
+                            <div class="top-shop-sidebar an-shop">
+                                <h3 class="wg-title">НАИБОЛИЕ ПРОДАВАЕМЫЕ</h3>
+                                <ul>
+                                   <li class="b-none">
+                                        <div class="tb-recent-thumbb">
+                                            <a href="">
+                                                <img class="attachment" src="/img/products/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="tb-recentb">
+                                            <div class="tb-beg">
+                                                <a href="#">Lambskin Shoe</a>
+                                            </div>
+                                            <div class="tb-product-price font-noraure-3">
+                                                <span class="amount">$180.00</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                   <li class="b-none">
+                                        <div class="tb-recent-thumbb">
+                                            <a href="">
+                                                <img class="attachment" src="/img/products/2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="tb-recentb">
+                                            <div class="tb-beg">
+                                                <a href="#">Luxury Leather Bag</a>
+                                            </div>
+                                            <div class="tb-product-price font-noraure-3">
+                                                <span class="amount2 ana">$170.00</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                   <li class="b-none agn">
+                                        <div class="tb-recent-thumbb">
+                                            <a href="">
+                                                <img class="attachment" src="/img/products/3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="tb-recentb">
+                                            <div class="tb-beg">
+                                                <a href="#">Vintage Glasses</a>
+                                            </div>
+                                            <div class="tb-product-price font-noraure-3">
+                                                <span class="amount2 ana">$170.00</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                               </ul>
+                            </div>
+                            <div class="ro-info-box-wrap tpl3 st">
+                                <div class="tb-image">
+                                    <img src="/img/products/4.jpg" alt="">
+                                </div>
+                                <div class="tb-content">
+                                    <div class="tb-content-inner an-inner">
+                                        <h5>СЮРПРИЗ БОКСЫ</h5>
+                                        <h3>РАСПРОДАЖА К НОВОМУ ГОДУ</h3>
+                                        <h6>
+                                            <a href="#">КУПИТЬ</a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+>>>>>>> Stashed changes
                     <div class="col-md-8 col-lg-9 col-sm-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
