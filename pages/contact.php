@@ -35,7 +35,7 @@
 						<div class="panel panel-default testimonial-img">
 								<div class="panel-body">
 									<div class="row">
-										<div class="col-sm-3"><br>
+										<div class="col-sm-3">
 										<strong>Адрес: </strong>
 												<address> Черкассы, ул. Крещатик 122 </address>
 										</div>
