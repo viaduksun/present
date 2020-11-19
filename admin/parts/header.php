@@ -40,6 +40,7 @@
           <link rel="stylesheet" href="/admin/css/responsive.css">
           <!-- modernizr css -->
           <script src="/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+          <script src="/admin/js/my.js"></script>
       </head>
       <body>
 
