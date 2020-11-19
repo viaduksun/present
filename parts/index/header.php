@@ -67,6 +67,7 @@
 									<li><a href="/pages/my-account.php"><i class="fa fa-user"></i>Моя страница</a></li>
 									<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i>Корзина</a></li>
 									<li><a href="/pages/login.php"><i class="fa fa-lock"></i>Войти</a></li>
+									<li><a href="/"><i class="fa fa-lock"></i>Выйти</a></li>
 								</ul>
 							</div>
 						</div>
