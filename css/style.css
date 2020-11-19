@@ -2547,7 +2547,8 @@ h4.yith-wcwl-share-title {
     font-size: 14px;
     font-weight: 400;
 }
-.tb-login-form > form > p.login-submit5 > input {
+.tb-login-form > form > p.login-submit5 > input,
+.tb-login-form > form > p.login-submit5 > button {
   border: 1px solid #f0f0f0;
   color: #747474;
   display: inline-block;
@@ -2559,7 +2560,8 @@ h4.yith-wcwl-share-title {
   transition: all 0.4s ease 0s;
   width: 120px;
 }
-.tb-login-form > form > p.login-submit5 > input:hover {
+.tb-login-form > form > p.login-submit5 > input:hover,
+.tb-login-form > form > p.login-submit5 > button:hover  {
     background: #ef6644 none repeat scroll 0 0;
     border-color: #ef6644;
     color: #ffffff;

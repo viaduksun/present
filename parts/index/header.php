@@ -83,65 +83,65 @@
 						</div>
 						<div class="col-sm-10 col-md-10 col-xs-8 static">
 							<div class="all-manu-area">
-							    <div class="mainmenu clearfix hidden-sm hidden-xs">
-                                    <nav>
-                                        <ul>
-                                            <li><a href="/">Главная</a></li>
-                                            <li><a href="/pages/shop.php">Магазин</a></li>
-                                            <li><a href="/pages/about-us.php">Про нас</a></li>
-                                            <li><a href="/pages/contact.php">Контакты</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- mobile menu start -->
-                                <div class="mobile-menu-area hidden-lg hidden-md">
-                                    <div class="mobile-menu">
-                                        <nav id="dropdown">
-                                            <ul>
-														  <li><a href="/">Главная</a></li>
-                                            <li><a href="/pages/shop.php">Магазин</a></li>
-                                            <li><a href="/pages/about-us.php">Про нас</a></li>
-                                            <li><a href="/pages/contact.php">Контакты</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                <!-- mobile menu end -->
-                                <div class="right-header re-right-header">
-                                    <ul>
-                                        <li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
-                                            <ul class="drop-cart">
+								<div class="mainmenu clearfix hidden-sm hidden-xs">
+										<nav>
+												<ul>
+														<li><a href="/">Главная</a></li>
+														<li><a href="/pages/shop.php">Магазин</a></li>
+														<li><a href="/pages/about-us.php">Про нас</a></li>
+														<li><a href="/pages/contact.php">Контакты</a></li>
+												</ul>
+										</nav>
+								</div>
+								<!-- mobile menu start -->
+								<div class="mobile-menu-area hidden-lg hidden-md">
+										<div class="mobile-menu">
+												<nav id="dropdown">
+														<ul>
+														<li><a href="/">Главная</a></li>
+														<li><a href="/pages/shop.php">Магазин</a></li>
+														<li><a href="/pages/about-us.php">Про нас</a></li>
+														<li><a href="/pages/contact.php">Контакты</a></li>
+														</ul>
+												</nav>
+										</div>
+								</div>
+								<!-- mobile menu end -->
+								<div class="right-header re-right-header">
+										<ul>
+												<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
+														<ul class="drop-cart">
 																<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
-														  		<li>
-                                                    <a href="/pages/cart.php" style="max-width: 70px;"><img src="/img/products/02.jpg" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">White Shirt</a></p>
-                                                        <p>$50.00</p>
-                                                        <span>Color : Blue</span>
-                                                        <span>Size   : SL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
+																	<li>
+																		<a href="/pages/cart.php" style="max-width: 70px;"><img src="/img/products/02.jpg" alt="" /></a>
+																		<div class="add-cart-text">
+																				<p><a href="#">White Shirt</a></p>
+																				<p>$50.00</p>
+																				<span>Color : Blue</span>
+																				<span>Size   : SL</span>
+																		</div>
+																		<div class="pro-close">
+																				<i class="pe-7s-close"></i>
+																		</div>
+																	</li>
+																	<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
+																<li class="total-amount clearfix">
+																		<span class="floatleft">total</span>
+																		<span class="floatright"><strong>= $150.00</strong></span>
 																</li>
-																<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
-                                                <li class="total-amount clearfix">
-                                                    <span class="floatleft">total</span>
-                                                    <span class="floatright"><strong>= $150.00</strong></span>
-                                                </li>
-                                                <li class="checkout-btn text-center">
-																	 <div class="goto text-center">
-                                                        <a href="/pages/cart.php"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+																<li class="checkout-btn text-center">
+																		<div class="goto text-center">
+																			<a href="/pages/cart.php"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
+																		</div>
+																</li>
+														</ul>
+												</li>
+										</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-        <!-- header section end -->
+<!-- header section end -->

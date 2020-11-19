@@ -5,7 +5,7 @@
 	include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
 
 	if(isset($_POST["order"])  && $_SERVER["REQUEST_METHOD"] == "POST"){
-		$findUserSql = "SELECT * FROM users WHERE phone = " . $_POST["email"];
+		$findUserSql = "SELECT * FROM users WHERE email LIKE '" . $_POST["email"] . "'";
 		$findResult = $conn->query($findUserSql);
 		$quantituFind = $findResult->num_rows;
 		$user_id = 0;
