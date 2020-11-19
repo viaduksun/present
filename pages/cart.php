@@ -78,7 +78,7 @@
 																				</a>
 																			</td>
 																			<td class="sop-cart">
-																				<a href="#"><img class="primary-image" alt="" src="/img/products/10.jpg"></a>
+																				<a href="#"><img class="primary-image" alt="" src="/img/products/25.jpg"></a>
 																			</td>
 																			<td class="sop-cart">
 																				<div class="tb-beg">
@@ -122,69 +122,60 @@
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane active" id="home">
 										<div class="row">
-												<form action="#">
+												<form method="POST" action="/modules/cart/order.php">
 													<div class="checkbox-form">
 														<div class="col-md-12">
-																<h3 class="checkbox9">Детали покупки</h3>
-														</div>
-														<div class="col-md-6">
-																<div class="di-na bs">
-																	<label class="l-contact">
-																	Имя
-																	<em>*</em>
-																	</label>
-																	<input class="form-control" type="text" required="" name="name">
-																</div>
-														</div>
-														<div class="col-md-6">
-																<div class="di-na bs">
-																	<label class="l-contact">
-																	Фамилия
-																	<em>*</em>
-																	</label>
-																	<input class="form-control" type="text" required="" name="name">
-																</div>
-														</div>
-														<div class="col-md-6">
-																<div class="di-na bs">
-																	<label class="l-contact">
-																	Адресс електроной почты 
-																	<em>*</em>
-																	</label>
-																	<input class="form-control" name="email" type='email' title='email' required pattern='b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}b' />
-																</div>
-														</div>
-														<div class="col-md-6">
-																<div class="di-na bs">
-																	<label class="l-contact">
-																	Моб. телефон 
-																	<em>*</em>
-																	</label>
-																	<input class="form-control" name="phone" type='tel' required pattern='(?[- .]*){7,13}' title='Введите номер телефона в международном, национальном или локальном формате' />
-																</div>
+															<h3 class="checkbox9">Детали покупки</h3>
 														</div>
 														<div class="col-md-12">
+															<div class="di-na bs">
 																<label class="l-contact">
-																	Адрес новой почты  
-																	<em>*</em>
+																ФИО
+																<em>*</em>
 																</label>
-																<div class="di-na bs">
-																	<input class="form-control" type="text" required="" name="name"  placeholder="Street address">
-																</div>
+																<input class="form-control" type="text" required="" name="name" pattern="^[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+$" placeholder="ФИО"> 
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="di-na bs">
+																<label class="l-contact">
+																Адресс електроной почты 
+																<em>*</em>
+																</label>
+																<input class="form-control" name="email" type='email' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' placeholder="email@em.ru"/>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="di-na bs">
+																<label class="l-contact">
+																Моб. телефон 
+																<em>*</em>
+																</label>
+																<input class="form-control" name="phone" type='phone' required pattern='(?[- .]*){7,13}' title='Введите номер телефона в международном, национальном или локальном формате' placeholder="+380935858328"/>
+															</div>
 														</div>
 														<div class="col-md-12">
-													<div class="di-na bs">
-														<label class="l-contact">
-																Order Notes
-														</label>
-														<textarea class="input-text " placeholder="Notes about your order, e.g. special notes for delivery." name="order_comments"></textarea>
-													</div>
-												</div>
-												<div class="col-md-12 text-center">
-													<p class="checkout-coupon">
-														<input type="submit" value="CONTINUE">
-													</p>
-												</div>
+															<label class="l-contact">
+																Адрес новой почты  
+																<em>*</em>
+															</label>
+															<div class="di-na bs">
+																<input class="form-control" type="text" required="" name="address"  placeholder="Street address">
+															</div>
+														</div>
+														<div class="col-md-12">
+															<div class="di-na bs">
+																<label class="l-contact">
+																		Order Notes
+																</label>
+																<textarea class="input-text" name="details" placeholder="Notes about your order, e.g. special notes for delivery." ></textarea>
+															</div>
+														</div>
+														<div class="col-md-12 text-center">
+															<p class="checkout-coupon">
+																<input type="submit" name="order" value="CONTINUE">
+															</p>
+														</div>
 													</div>
 												</form>
 										</div>
@@ -202,7 +193,7 @@
 									<div class="ro-item">
 										<div class="ro-image">
 												<a href="#">
-													<img src="/img/products/c15.jpg" alt="">
+													<img src="/img/products/23.jpg" alt="">
 												</a>
 										</div>
 										<div>
@@ -227,12 +218,12 @@
 								<div class="ro-footer">
 									<div class="ro-title order-total">
 										<p>
-												Общая стоимость:
-												<span>
-													<strong>
-														<span class="amount">$99.00</span>
-													</strong>
-												</span>
+											Общая стоимость:
+											<span>
+												<strong>
+													<span class="amount">$99.00</span>
+												</strong>
+											</span>
 										</p>
 									</div>
 								</div>

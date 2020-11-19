@@ -88,7 +88,7 @@ hr.line {
   position: relative;
 }
 .section-padding{padding:90px 0;}
-.section-padding-top{padding-top:90px;}
+.section-padding-top{padding-top:20px;}
 .section-padding-bottom{padding-bottom:90px;}
 .d-table {
     display: table;
@@ -365,7 +365,7 @@ ul.drop-setting li,.mainmenu ul li ul li {
 .drop-cart img {
     float: left;
     margin-right: 10px;
-    padding: 10px;
+    padding-top: 5px;
 }
 .drop-cart > li {
     border-bottom: 1px solid #e5e5e5 !important;
@@ -1680,6 +1680,7 @@ hr.dubble-border {margin: 0;}
 .all-shop-sidebar, .single-sidebar {
   overflow: hidden;
   position: relative;
+  margin-top: 20px;
 }
 
 .products-page  .top-shop-sidebar::before, .single-product-area .single-sidebar::before {
@@ -1727,12 +1728,25 @@ hr.dubble-border {margin: 0;}
 .products-page .shop-one ul li::after {
   border: 1px solid #cccccc;
   content: "";
-  height: 10px;
+  height: 15px;
+  width: 15px;
   left: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 10px;
+  
+}
+.products-page .shop-one ul li .active ::after {
+  border: 1px solid #cccccc;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff725b;
+  
 }
 .products-page .shop-one ul li {
   border: medium none !important;
@@ -1745,9 +1759,9 @@ hr.dubble-border {margin: 0;}
 .products-page .shop-one ul li a {
   color: #747474;
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 41px;
   padding-left: 20px;
   transition: all 0.4s ease 0s;
 }
@@ -1764,6 +1778,7 @@ hr.dubble-border {margin: 0;}
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.4s ease 0s;
+  font-size: 18px;
 }
 
 .top-shop-sidebar.sim {
@@ -2037,7 +2052,9 @@ a.clear-all {
     display: block;
 }
 .shop-all-tab-cr{
-    border-bottom: 1px solid #ebebeb;
+    justify-content: center;
+    border-top: 1px solid #ebebeb;
+    display: flex;
 }
 .shop-all-tab-nor{
     border-top: 1px solid #ebebeb;
@@ -2119,7 +2136,7 @@ a.clear-all {
 .two-part .page ul li{
     color: #00a9e0;
     display: inline;
-    margin: 10px 2px 0px;
+    /*margin: 10px 2px 0px;*/
 }
 .two-part .page ul li a{
     font-size: 12px;
@@ -2135,7 +2152,7 @@ a.clear-all {
 .features-tab .shop-all-tab {
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 .features-tab ul.tabs li {
     float: left;
@@ -2547,7 +2564,8 @@ h4.yith-wcwl-share-title {
     font-size: 14px;
     font-weight: 400;
 }
-.tb-login-form > form > p.login-submit5 > input {
+.tb-login-form > form > p.login-submit5 > input,
+.tb-login-form > form > p.login-submit5 > button {
   border: 1px solid #f0f0f0;
   color: #747474;
   display: inline-block;
@@ -2559,7 +2577,8 @@ h4.yith-wcwl-share-title {
   transition: all 0.4s ease 0s;
   width: 120px;
 }
-.tb-login-form > form > p.login-submit5 > input:hover {
+.tb-login-form > form > p.login-submit5 > input:hover,
+.tb-login-form > form > p.login-submit5 > button:hover  {
     background: #ef6644 none repeat scroll 0 0;
     border-color: #ef6644;
     color: #ffffff;
