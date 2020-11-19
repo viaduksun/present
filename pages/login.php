@@ -45,14 +45,14 @@
 																			Email
 																			<em>*</em>
 																	</label>
-																	<input type="email">
+																	<input class="form-control" name="email" type='email' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' placeholder="email@em.ru"/>
 															</p>
 															<p class="checkout-coupon top-down log a-an">
 																	<label class="l-contact">
 																			Пароль
 																			<em>*</em>
 																	</label>
-																	<input type="password">
+																	<input title='Пароль должен состоять минимум из 8 символов и содержать хотя бы одну цифру и один символ нижнего и верхнего регистра' type='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' required placeholder="Aa1fE4h5" />
 															</p>
 															<p class="login-submit5">
 																	<button type="submit" class="button-primary">Войти</button>
@@ -66,31 +66,23 @@
 													<form action="#">
 															<p class="checkout-coupon top log a-an">
 																	<label class="l-contact">
-																			Имя
+																			ФИО
 																			<em>*</em>
 																	</label>
-																	<input type='text' title='name' required name="name" />
-															</p>
+																	<input class="form-control" type="text" required="" name="name" pattern="^[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+$" placeholder="ФИО"> 															</p>
 															<p class="checkout-coupon top log a-an">
 																	<label class="l-contact">
-																			Email
+																			Адресс електроной почты 
 																			<em>*</em>
 																	</label>
-																	<input type='text' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' />
-															</p>
-															<p class="checkout-coupon top log a-an">
-																	<label class="l-contact">
-																			Номер телефона
-																			<em>*</em>
-																	</label>
-																	<input type='text' required pattern='(?[- .]*){7,13}' title='Введите номер телефона в международном, национальном или локальном формате' />
-															</p>
+																	<input class="form-control" name="email" type='email' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' placeholder="email@em.ru"/>
+															</p>															</p>
 															<p class="checkout-coupon top log a-an">
 																	<label class="l-contact">
 																			Пароль
 																			<em>*</em>
 																	</label>
-																	<input title='Пароль должен состоять минимум из 8 символов и содержать хотя бы одну цифру и один символ нижнего и верхнего регистра' type='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' required />
+																	<input title='Пароль должен состоять минимум из 8 символов и содержать хотя бы одну цифру и один символ нижнего и верхнего регистра' type='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' required placeholder="Aa1fE4h5" />
 															</p>
 															<p class="login-submit5 ress">
 															<button type="submit" class="button-primary">вперед</button>

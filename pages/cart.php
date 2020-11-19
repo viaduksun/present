@@ -130,10 +130,10 @@
 														<div class="col-md-12">
 															<div class="di-na bs">
 																<label class="l-contact">
-																Имя Фамилия
+																ФИО
 																<em>*</em>
 																</label>
-																<input class="form-control" type="text" required="" name="name">
+																<input class="form-control" type="text" required="" name="name" pattern="^[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+\s+[а-щА-ЩієїґюяьыэёъІЄЇҐЮЯЬЪЭЁ]+$" placeholder="ФИО"> 
 															</div>
 														</div>
 														<div class="col-md-6">
@@ -142,7 +142,7 @@
 																Адресс електроной почты 
 																<em>*</em>
 																</label>
-																<input class="form-control" name="email" type='email' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' />
+																<input class="form-control" name="email" type='email' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' placeholder="email@em.ru"/>
 															</div>
 														</div>
 														<div class="col-md-6">
@@ -151,7 +151,7 @@
 																Моб. телефон 
 																<em>*</em>
 																</label>
-																<input class="form-control" name="phone" type='phone' required pattern='(?[- .]*){7,13}' title='Введите номер телефона в международном, национальном или локальном формате' />
+																<input class="form-control" name="phone" type='phone' required pattern='(?[- .]*){7,13}' title='Введите номер телефона в международном, национальном или локальном формате' placeholder="+380935858328"/>
 															</div>
 														</div>
 														<div class="col-md-12">
