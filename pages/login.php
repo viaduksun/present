@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="con-text">
-                            <h2 class="page-title">Login</h2>
-                            <p><a href="#">Home</a> | Login</p>
+                            <h2 class="page-title">Аккаунт</h2>
+                            <p><a href="/">Главная</a> | Войти | Зарегистрироваться</p>
                         </div>
                     </div>
                 </div>
@@ -22,38 +22,24 @@
                     <div class="col-md-6 col-xs-12">
                         <div class="tb-login-form ">
                             <h5 class="tb-title">Login</h5>
-                            <p>Hello, Welcome your to account</p>
-                            <div class="tb-social-login">
-                                <a class="tb-facebook-login" href="#">
-                                    <i class="fa fa-facebook"></i>
-                                    Sign In With Facebook
-                                </a>
-                                <a class="tb-twitter-login res" href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Sign In With Twitter
-                                </a>
-                            </div>
+                            <p>Здравствуйте, добро пожаловать в аккаунт</p>
                             <form action="#">
                                 <p class="checkout-coupon top log a-an">
                                     <label class="l-contact">
-                                        Email Address
+                                        Email
                                         <em>*</em>
                                     </label>
                                     <input type="email">
                                 </p>
                                 <p class="checkout-coupon top-down log a-an">
                                     <label class="l-contact">
-                                        Password
+                                        Пароль
                                         <em>*</em>
                                     </label>
                                     <input type="password">
                                 </p>
                                 <div class="forgot-password1">
-                                    <label class="inline2">
-                                        <input type="checkbox" name="rememberme7">
-                                        Remember me! <em>*</em>
-                                    </label>
-                                    <a class="forgot-password" href="#">Forgot Your password?</a>
+                                    <a class="forgot-password" href="#">Забыли свой пароль?</a>
                                 </div>
                                 <p class="login-submit5">
                                     <input class="button-primary" type="submit" value="login">
@@ -63,12 +49,34 @@
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="tb-login-form res">
-                            <h5 class="tb-title">Create a new account</h5>
-                            <p>Hello, Welcome your to account</p>
+                            <h5 class="tb-title">Создать новый аккаунт</h5>
+                            <p>Здравствуйте, добро пожаловать в аккаунт</p>
                             <form action="#">
                                 <p class="checkout-coupon top log a-an">
                                     <label class="l-contact">
-                                        Email Address
+                                        Имя
+                                        <em>*</em>
+                                    </label>
+                                    <input type="name">
+                                </p>
+                                <p class="checkout-coupon top log a-an">
+                                    <label class="l-contact">
+                                        Email
+                                        <em>*</em>
+                                    </label>
+																		<input type='text' title='email' required pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}' />
+                                    <input type="email">
+                                </p>
+                                <p class="checkout-coupon top log a-an">
+                                    <label class="l-contact">
+                                        Пароль
+                                        <em>*</em>
+                                    </label>
+                                    <input type="email">
+                                </p>
+                                <p class="checkout-coupon top log a-an">
+                                    <label class="l-contact">
+                                        Номер телефона
                                         <em>*</em>
                                     </label>
                                     <input type="email">
