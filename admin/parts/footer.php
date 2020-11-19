@@ -25,5 +25,6 @@
           <script src="/admin/js/plugins.js"></script>
           <!-- main js -->
           <script src="/admin/js/main.js"></script>
+          <script src="/admin/js/my.js"></script>
       </body>
       </html>
