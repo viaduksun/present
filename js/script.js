@@ -9,6 +9,9 @@ document.querySelectorAll(".add-to-cart").forEach(function(add){
 		
 		const quantCart = document.querySelector('.quantity-cart');
 		quantCart.innerText = Number(quantCart.innerText) + 1;
+		
+		document.querySelector('.drop-cart').innerHTML = addRequest.response;
+		console.log(addRequest.response);
 	}
 });
 
