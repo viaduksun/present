@@ -10,7 +10,7 @@
 				<div class="col-md-12 text-center">
 					<div class="con-text">
 							<h2 class="page-title">Category</h2>
-							<p><a href="/admin/">Главная</a> | Category</p>
+							<p><a href="/admin/">Home</a> | Category</p>
 					</div>
 				</div>
 			</div>
@@ -33,7 +33,7 @@
                                 </h4>
                             </div>
                             
-                            </div>
+                            
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" >
                                 <div class="row">
                                     <div class="easy2">
@@ -79,6 +79,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">

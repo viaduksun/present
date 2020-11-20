@@ -9,8 +9,8 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="con-text">
-								<h2 class="page-title">Продукты</h2>
-								<p><a href="/admin/">Главная</a> | Продукты</p>
+								<h2 class="page-title">Products</h2>
+								<p><a href="/admin/">Home</a> | Products</p>
 						</div>
 					</div>
 				</div>
