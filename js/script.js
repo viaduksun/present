@@ -1,7 +1,6 @@
 const linkSite = "http://present.local/";
 
-document.querySelectorAll(".add-to-cart").forEach(function(add){
-	add.onclick = function(e){
+function addCart(add){
 		const addRequest = new XMLHttpRequest();
 			 addRequest.open("POST", linkSite + "modules/cart/add-product.php", false);
 			 addRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -11,9 +10,7 @@ document.querySelectorAll(".add-to-cart").forEach(function(add){
 		quantCart.innerText = Number(quantCart.innerText) + 1;
 		
 		document.querySelector('.drop-cart').innerHTML = addRequest.response;
-		console.log(addRequest.response);
-	}
-});
+}
 
 document.querySelectorAll('.change-quant').forEach(function(input){
 	input.oninput = function(){

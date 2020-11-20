@@ -4,6 +4,7 @@
 		</div>
 		<a href="#">
 			<img src="/img/products/41.jpg" alt="Product Title" />
+			<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
 		</a>
 	</div>
 	<div class="product-dsc">
@@ -21,5 +22,5 @@
 	</div>
 	<div class="actions-btn">
 		<a href="#" data-placement="top" data-target="#quick-view" data-trigger="hover" data-toggle="modal" data-original-title="Посмотреть"><i class="fa fa-eye"></i></a>
-		<div class="add-to-cart" data-id="<?php echo  ?>" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></div>
+		<a href="#" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></a>
 	</div>

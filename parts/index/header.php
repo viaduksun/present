@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-
         <title>Gift-Hub</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,32 +32,32 @@
 		<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- all css here -->
 		<!-- bootstrap v3.3.6 css -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 		<!-- animate css -->
-        <link rel="stylesheet" href="/css/animate.css">
+  	<link rel="stylesheet" href="/css/animate.css">
 		<!-- pe-icon-7-stroke -->
 		<link rel="stylesheet" href="/css/pe-icon-7-stroke.min.css">
 		<!-- jquery-ui.min css -->
-        <link rel="stylesheet" href="/css/jquery-ui.min.css">
-        <!-- Image Zoom CSS
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <!-- Image Zoom CSS
 		============================================ -->
-        <link rel="stylesheet" href="/css/img-zoom/jquery.simpleLens.css">
+    <link rel="stylesheet" href="/css/img-zoom/jquery.simpleLens.css">
 		<!-- meanmenu css -->
-        <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
 		<!-- nivo slider CSS
 		============================================ -->
 		<link rel="stylesheet" href="/lib/css/nivo-slider.css" type="text/css" />
 		<link rel="stylesheet" href="/lib/css/preview.css" type="text/css" media="screen" />
 		<!-- owl.carousel css -->
-        <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
 		<!-- font-awesome css -->
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 		<!-- style css -->
 		<link rel="stylesheet" href="/css/style.css">
 		<!-- responsive css -->
-        <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 		<!-- modernizr css -->
-        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -104,47 +103,47 @@
 						<div class="col-sm-10 col-md-10 col-xs-8 static">
 							<div class="all-manu-area">
 								<div class="mainmenu clearfix hidden-sm hidden-xs">
-										<nav>
-												<ul>
-														<li><a href="/">Главная</a></li>
-														<li><a href="/pages/shop.php">Магазин</a></li>
-														<li><a href="/pages/about-us.php">Про нас</a></li>
-														<li><a href="/pages/contact.php">Контакты</a></li>
-												</ul>
-										</nav>
+									<nav>
+										<ul>
+											<li><a href="/">Главная</a></li>
+											<li><a href="/pages/shop.php">Магазин</a></li>
+											<li><a href="/pages/about-us.php">Про нас</a></li>
+											<li><a href="/pages/contact.php">Контакты</a></li>
+										</ul>
+									</nav>
 								</div>
 								<!-- mobile menu start -->
 								<div class="mobile-menu-area hidden-lg hidden-md">
-										<div class="mobile-menu">
-												<nav id="dropdown">
-														<ul>
-														<li><a href="/">Главная</a></li>
-														<li><a href="/pages/shop.php">Магазин</a></li>
-														<li><a href="/pages/about-us.php">Про нас</a></li>
-														<li><a href="/pages/contact.php">Контакты</a></li>
-														</ul>
-												</nav>
-										</div>
+									<div class="mobile-menu">
+										<nav id="dropdown">
+											<ul>
+												<li><a href="/">Главная</a></li>
+												<li><a href="/pages/shop.php">Магазин</a></li>
+												<li><a href="/pages/about-us.php">Про нас</a></li>
+												<li><a href="/pages/contact.php">Контакты</a></li>
+											</ul>
+										</nav>
+									</div>
 								</div>
 								<!-- mobile menu end -->
 								<div class="right-header re-right-header">
 										<ul>
-										<?php
-											include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
-											$count = 0;
-											if (isset($_COOKIE['basket'])) {
-												$basket = json_decode($_COOKIE['basket'], true);
-												for ($i = 0; $i < count($basket['basket']); $i += 1) {
-													$count += $basket['basket'][$i]['quant'];
+											<?php
+												include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
+												$count = 0;
+												if (isset($_COOKIE['basket'])) {
+													$basket = json_decode($_COOKIE['basket'], true);
+													for ($i = 0; $i < count($basket['basket']); $i += 1) {
+														$count += $basket['basket'][$i]['quant'];
+													}
 												}
-											}
-												?>
-												<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1 quantity-cart"><?php echo $count ?></span></a>
-														<ul class="drop-cart">
-															<?php
-																include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/drop-cart.php";
-															?>
-													</ul>
+											?>
+											<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1 quantity-cart"><?php echo $count ?></span></a>
+												<ul class="drop-cart">
+													<?php
+														include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/drop-cart.php";
+													?>
+												</ul>
 											</li>
 										</ul>
 								</div>

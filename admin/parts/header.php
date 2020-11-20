@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
 
         <!-- favicon
           ============================================ -->		
-          <link rel="shortcut icon" type="image/x-icon" href="/img/logo2.png">
+          <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
           <!-- google fonts -->
           <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
           <!-- all css here -->
