@@ -101,7 +101,7 @@
 									<?php 
 								    $sgla = "SELECT * FROM `availability`";
 								    $resultA = $conn->query($sgla);
-
+										?>
 
 <?php
     include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
