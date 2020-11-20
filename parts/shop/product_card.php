@@ -28,7 +28,7 @@
 		</div>
 		<div class="actions-btn">
 			<a href="#" data-placement="top" data-target="#quick-view" data-trigger="hover" data-toggle="modal" data-original-title="Посмотреть"><i class="fa fa-eye"></i></a>
-			<a class="add-to-cart" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></a>
+			<a class="add-to-cart" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину" onclick="addCart(this)"><i class="fa fa-shopping-cart"></i></a>
 		</div>
 	</div>
 </div>

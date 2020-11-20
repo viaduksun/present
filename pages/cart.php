@@ -60,7 +60,7 @@
 						<div class="coupon-accordion res">
 								<h3>Хотите посмотерть всю корзину? <span id="showcoupon">Нажмите здесь, чтобы посмотреть товары</span></h3>
 								<!-- tnm -->
-								<div id="checkout_coupon" class="coupon-checkout-content">
+								<div id="checkout_coupon" class="coupon-checkout-content tnm">
 									<!-- wishlist content section start -->
 								<div class="shopping-cart-area">
 										<div class="container-fluid">
