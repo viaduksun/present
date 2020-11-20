@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-container banner-box res-btm">
-                                <a href="#" >
+                                <a href="/pages/product_category.php?category_id=4" >
                                     <img alt="" src="/img/products/46.jpg">
                                     <div>
                                         <h2>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-box banner-box-re">
-                                <a href="#" class="link-height">
+                                <a href="/pages/product_category.php?category_id=1" class="link-height">
                                     <img alt="" src="/img/products/11.jpg" class="image-center">
                                     <div>
                                         <h2>
@@ -96,7 +96,7 @@
                                 </a>
                             </div>
                             <div class="banner-box res-btm">
-                                <a href="#" class="link-height">
+                                <a href="/pages/product_category.php?category_id=2" class="link-height">
                                     <img alt="" src="/img/products/22.jpg" class="image-center">
                                     <div>
                                         <h2>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-box banner-box-re">
-                                <a href="#" class="link-height">
+                                <a href="/pages/product_category.php?category_id=3" class="link-height">
                                     <img alt="" src="/img/products/33.jpg" class="image-center">
                                     <div>
                                         <h2>
@@ -120,7 +120,7 @@
                                 </a>
                             </div>
                             <div class="banner-box">
-                                <a href="#" class="link-height">
+                                <a href="/pages/product_category.php?category_id=5" class="link-height">
                                     <img alt="" src="/img/products/54.jpg" class="image-center">
                                     <div>
                                         <h2>
