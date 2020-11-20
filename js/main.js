@@ -316,3 +316,61 @@ $(".pro-img-tab-slider").owlCarousel({
     
 	
 })(jQuery); 
+
+var siteURL = "http://present.local/";
+
+function categorySelect(category) {
+// Вывод в консоль ID категории по которой кликнули (dataset - занесли пользовательский атрибут)
+console.dir(category.dataset.category_id);
+console.dir(category);
+// Формируем AJAX 
+var ajax = new XMLHttpRequest();
+// Задаем характеристики ajax
+ajax.open("POST", siteURL + "parts/shop/select_category.php", false);
+// Метод XMLHttpRequest.setRequestHeader() устанавливает значения HTTP заголовков. так как не читался 'send'
+ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// Посылаем в $_GET - id категории для последующей обработки в sql запросе в select_category.php 
+ajax.send("current_category_id=" + category.dataset.category_id);
+
+// console.dir(ajax);
+// console.dir(ajax.response);
+var response = ajax.response;
+
+// Выбираем ДИВ с карточками продуктов
+var productsBlock = document.querySelector("#shop_place_for_cards");
+// Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
+  productsBlock.innerHTML = response;
+
+category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
+// category.parentNode.parentNode.children.className = "cat-item";
+category.parentNode.className = "cat-item current-cat";
+
+// console.dir(response);
+}
+
+function cookie_remove(all) {  
+
+console.dir(all);
+// Формируем AJAX 
+var ajax = new XMLHttpRequest();
+// Задаем характеристики ajax
+ajax.open("POST", siteURL + "parts/shop/show_all.php", false);
+// Метод XMLHttpRequest.setRequestHeader() устанавливает значения HTTP заголовков. так как не читался 'send'
+ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// Посылаем в $_GET - id категории для последующей обработки в sql запросе в select_category.php 
+ajax.send();
+
+// console.dir(ajax);
+// console.dir(ajax.response);
+var response = ajax.response;
+
+// Выбираем ДИВ с карточками продуктов
+var productsBlock = document.querySelector("#shop_place_for_cards");
+// Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
+productsBlock.innerHTML = response;
+
+// category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
+// category.parentNode.parentNode.children.className = "cat-item";
+all.parentNode.className = "cat-item current-cat";
+// console.dir(response);
+}

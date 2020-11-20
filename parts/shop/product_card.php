@@ -1,13 +1,15 @@
 <div class="col-md-4 col-lg-4 col-sm-6">
 	<div class="single-product s-top s-bottom">
 		<div class="product-img">
-			<div class="pro-type">
+			
 
 				<?php 
 				// Задание статуса товара либо NEW либо ничего (в БД графа status 1 / 0)
-				if ($row['status']== 1) {?> <span>new</span> <?php
-				}?>				
-			</div>
+				if ($row['status']== 1) {?> <div class="pro-type"><span >new</span></div> <?php
+				}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
+				} 
+				?>				
+			
 			<a href="single_product_page.php?productId=<?php echo $row['id'] ?>">				
 				<img src="/img/products/<?php echo $row['image'] ?>"/>
 				<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
