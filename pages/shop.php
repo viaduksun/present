@@ -129,7 +129,7 @@
 			include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
 			?>
 		<!-- quick view end -->
-		<script src="/js/script.js"></script>
+		<!-- <script src="/js/script.js"></script> -->
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
 ?>
