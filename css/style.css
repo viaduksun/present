@@ -4722,3 +4722,9 @@ h2.page-title {
 .image-center{
 	margin: -75px 0px 0px 0px;
 }
+.all-sum:after {
+	content: " грн.";
+}
+.all-quant:after {
+	content: " шт.";
+}

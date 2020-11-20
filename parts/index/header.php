@@ -5,33 +5,30 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <title>Gift-Hub</title>
-                <!-- HelloPreload http://hello-site.ru/preloader/ -->
-        <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #BE90D4 url(http://hello-site.ru//main/images/preloads/hearts.svg) center center no-repeat;background-size:180px;}</style>
-        <div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
-        <script type="text/javascript">
-        var hellopreloader = document.getElementById("hellopreloader_preload");
-        function fadeOutnojquery(el){
-            el.style.opacity = 1;
-            var interhellopreloader = setInterval(function(){
-                el.style.opacity = el.style.opacity - 0.05;
-                if (el.style.opacity <=0.05){ 
-                    clearInterval(interhellopreloader)
-                    ;hellopreloader.style.display = "none";}
-                    },16);}
-                    window.onload = function(){setTimeout(function(){
-                        fadeOutnojquery(hellopreloader);
-                        },700);
-        };
-        </script>
-        <!-- HelloPreload http://hello-site.ru/preloader/ -->
-        
-
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="shortcut icon" type="image/x-icon" href="/img/logo2.png">
 
-        <!-- favicon
-		============================================ -->		
-        <link rel="shortcut icon" type="image/x-icon" href="/img/logo2.png">
+				<!-- HelloPreload http://hello-site.ru/preloader/ -->
+				<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #BE90D4 url(http://hello-site.ru//main/images/preloads/hearts.svg) center center no-repeat;background-size:180px;}</style>
+					<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+					<script type="text/javascript">
+					var hellopreloader = document.getElementById("hellopreloader_preload");
+					function fadeOutnojquery(el){
+							el.style.opacity = 1;
+							var interhellopreloader = setInterval(function(){
+								el.style.opacity = el.style.opacity - 0.05;
+								if (el.style.opacity <=0.05){ 
+									clearInterval(interhellopreloader)
+									;hellopreloader.style.display = "none";}
+								},16);}
+								window.onload = function(){setTimeout(function(){
+										fadeOutnojquery(hellopreloader);
+								},700);
+					};
+        </script> -->
+        <!-- HelloPreload http://hello-site.ru/preloader/ -->
+
 		<!-- google fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- all css here -->
@@ -132,33 +129,61 @@
 								<!-- mobile menu end -->
 								<div class="right-header re-right-header">
 										<ul>
-												<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
+										<?php
+											include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
+											$count = 0;
+											if (isset($_COOKIE['basket'])) {
+												$basket = json_decode($_COOKIE['basket'], true);
+												for ($i = 0; $i < count($basket['basket']); $i += 1) {
+													$count += $basket['basket'][$i]['quant'];
+												}
+											}
+												?>
+												<li><a href="/pages/cart.php"><i class="fa fa-shopping-cart"></i><span class="color1 quantity-cart"><?php echo $count ?></span></a>
 														<ul class="drop-cart">
+															<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
+															<?php
+															if(isset($_COOKIE['basket'])){
+																$sum = 0;
+																	for ($i = 0; $i < count($basket['basket']); $i += 1){
+																		$productSql = "SELECT * FROM products WHERE id = " . $basket['basket'][$i]['product_id'];
+																		$productResult = $conn->query($productSql);
+																		$product = mysqli_fetch_assoc($productResult);
+																		$sum += $product['price']*$basket['basket'][$i]['quant'];
+																?>
+																<li>
+																	<a href="/pages/cart.php" style="max-width: 70px;"><img src="/img/products/<?php echo $product["image"] ?>" alt="" /></a>
+																	<div class="add-cart-text">
+																			<p><a href="#"><?php echo $product["title"] ?></a></p>
+																			<p>
+																				<span><?php echo $basket['basket'][$i]["quant"] ?> × </span>
+																				<span class="all-sum"><?php echo ($product["price"]) ?></span>
+																				<span class="all-sum">= <?php echo ($product["price"]*$basket['basket'][$i]['quant']) ?></span>
+																			</p>
+																	</div>
+																</li>
+																<?php
+																	}
+																?>
 																<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
-																	<li>
-																		<a href="/pages/cart.php" style="max-width: 70px;"><img src="/img/products/02.jpg" alt="" /></a>
-																		<div class="add-cart-text">
-																				<p><a href="#">White Shirt</a></p>
-																				<p>$50.00</p>
-																				<span>Color : Blue</span>
-																				<span>Size   : SL</span>
-																		</div>
-																		<div class="pro-close">
-																				<i class="pe-7s-close"></i>
-																		</div>
-																	</li>
-																	<!-- ЭТО КАРТОЧКА КОРЗИНЫ -->
 																<li class="total-amount clearfix">
-																		<span class="floatleft">total</span>
-																		<span class="floatright"><strong>= $150.00</strong></span>
+																		<span class="floatleft">total = </span>
+																		<span class="floatright"><strong class="all-sum sum"><?php echo $sum; ?></strong></span>
 																</li>
 																<li class="checkout-btn text-center">
 																		<div class="goto text-center">
 																			<a href="/pages/cart.php"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
 																		</div>
 																</li>
-														</ul>
-												</li>
+															<?php
+															}else{
+																?>
+																	<p>Ваша корзина пуста.</p>
+															<?php
+																}
+															?>
+													</ul>
+											</li>
 										</ul>
 								</div>
 							</div>

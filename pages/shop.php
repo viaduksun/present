@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
-    include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
-    include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
+  include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
+  include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
 ?>
         <!-- shopheader-start -->		
 		<!-- shopheader-end -->
@@ -129,6 +129,7 @@
 			include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
 			?>
 		<!-- quick view end -->
+		<script src="/js/script.js"></script>
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
 ?>

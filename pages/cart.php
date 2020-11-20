@@ -1,5 +1,6 @@
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
+	include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
 ?>
 <!-- pages-title-start -->
 <section class="contact-img-area">
@@ -49,12 +50,17 @@
 						</div>
 					</div>
 				</div>
+				<?php
+					if (isset($_COOKIE['basket'])) {
+						$basket = json_decode($_COOKIE['basket'], true);
+						?>
+						
 				<div class="row">
 					<div class="col-md-12">
 						<div class="coupon-accordion res">
 								<h3>Хотите посмотерть всю корзину? <span id="showcoupon">Нажмите здесь, чтобы посмотреть товары</span></h3>
 								<!-- tnm -->
-								<div id="checkout_coupon" class="coupon-checkout-content tnm">
+								<div id="checkout_coupon" class="coupon-checkout-content">
 									<!-- wishlist content section start -->
 								<div class="shopping-cart-area">
 										<div class="container-fluid">
@@ -69,40 +75,57 @@
 																			<th class="low2">Название</th>
 																			<th>Количество</th>
 																			<th>Цена</th>
+																			<th>Сумма</th>
 																		</tr>
 																		<!-- это карточки -->
-																		<tr>
-																			<td class="sop-icon1">
-																				<a href="#">
-																						<i class="fa fa-times"></i>
-																				</a>
-																			</td>
-																			<td class="sop-cart">
-																				<a href="#"><img class="primary-image" alt="" src="/img/products/25.jpg"></a>
-																			</td>
-																			<td class="sop-cart">
-																				<div class="tb-beg">
-																						<a href="#">Vintage Shoe</a>
-																				</div>
-																			</td>
-																			<td class="sop-cart">
-																				<div class="tb-product-price font-noraure-3">
-																					<input type="number" min="0" max="15" value="3">
-																				</div>
-																			</td>
-																			<td class="cen">
-																				<div class="tb-product-price font-noraure-3">
-																						<span class="amount">180.00</span> грн.
-																				</div>
-																			</td>
-																		</tr>
-
+																		<?php
+																			for ($i = 0; $i < count($basket['basket']); $i += 1){
+																				$productSql = "SELECT * FROM products WHERE id = " . $basket['basket'][$i]['product_id'];
+																				$productResult = $conn->query($productSql);
+																				$product = mysqli_fetch_assoc($productResult);
+																				?>
+																			<tr>
+																				<td class="sop-icon1">
+																					<a onclick="deleteItem(this, <?php echo $product['id'] . ', ' . $basket['basket'][$i]['quant']; ?>)">
+																							<i class="fa fa-times"></i>
+																					</a>
+																				</td>
+																				<td class="sop-cart">
+																					<a href="#"><img class="primary-image" alt="" src="/img/products/<?php echo $product["image"] ?>"></a>
+																				</td>
+																				<td class="sop-cart">
+																					<div class="tb-beg">
+																							<a href="#"><?php echo $product["title"] ?></a>
+																					</div>
+																				</td>
+																				<td class="sop-cart">
+																					<div class="tb-product-price font-noraure-3">
+																						<input class="change-quant" data-id="<?php echo $product["id"] ?>" data-price="<?php echo $product["price"] ?>" type="number" min="0" max="15" value="<?php echo $basket['basket'][$i]['quant'] ?>">
+																					</div>
+																				</td>
+																				<td class="cen">
+																					<div class="tb-product-price font-noraure-3">
+																							<span class="amount"><?php echo $product["price"] ?></span> грн.
+																					</div>
+																				</td>
+																				<td class="cen">
+																					<div class="tb-product-price font-noraure-3">
+																							<span class="amount all-sum result-sum"><?php echo ($product["price"]*$basket['basket'][$i]['quant']) ?></span>
+																					</div>
+																				</td>
+																			</tr>
+																				<?php
+																			}
+																		?>
+																		
+																		<!-- это карточки -->
 																		<tr>
 																			<th class="low1">Сумма</th>
 																			<th></th>
 																			<th class="low2"></th>
-																			<th>12</th>
-																			<th>1256</th>
+																			<th class="all-quant"></th>
+																			<th></th>
+																			<th class="all-sum sum"></th>
 																		</tr>
 																</table>
 															</div>
@@ -184,36 +207,45 @@
 						</div>
 					</div>
 					<div class="col-md-5 col-sm-12">
-						<div class="ro-checkout-summary">
+						<div class="ro-checkout-summary cart-card">
 								<div class="ro-title">
 									<h3 class="checkbox9 my-margin-bottom-0">ВАШ ЗАКАЗ</h3>
 								</div>
 								<!-- ЭТО КАРТОЧКА ТАКИХ БУДЕТ КАК В КУКИ -->
+								<?php
+									for ($i = 0; $i < count($basket['basket']); $i += 1){
+										$productSql = "SELECT * FROM products WHERE id = " . $basket['basket'][$i]['product_id'];
+										$productResult = $conn->query($productSql);
+										$product = mysqli_fetch_assoc($productResult);
+								?>
 								<div class="ro-body">
 									<div class="ro-item">
 										<div class="ro-image">
 												<a href="#">
-													<img src="/img/products/23.jpg" alt="">
+													<img src="/img/products/<?php echo $product["image"] ?>" alt="">
 												</a>
 										</div>
 										<div>
 												<div class="tb-beg">
-													<a href="#">Luxury Leather Bag </a>
+													<a href="#"><?php echo $product["title"] ?></a>
 												</div>
 										</div>
 										<div>
 												<div class="ro-price">
-													<span class="amount">$99.00</span>
+													<span class="amount all-sum"><?php echo ($product["price"]) ?></span>
 												</div>
 												<div class="ro-quantity">
-													<strong class="product-quantity">× 1</strong>
+													<strong class="product-quantity">× <?php echo $basket['basket'][$i]['quant'] ?></strong>
 												</div>
 												<div class="product-total">
-													<span class="amount">$99.00</span>
+													<span class="amount all-sum"><?php echo ($product["price"]*$basket['basket'][$i]['quant']) ?></span>
 												</div>
 										</div>
 									</div>
 								</div>
+								<?php
+									}
+								?>
 								<!-- ЭТО КАРТОЧКА ТАКИХ БУДЕТ КАК В КУКИ -->
 								<div class="ro-footer">
 									<div class="ro-title order-total">
@@ -221,7 +253,7 @@
 											Общая стоимость:
 											<span>
 												<strong>
-													<span class="amount">$99.00</span>
+													<span class="amount all-sum sum">99.00</span>
 												</strong>
 											</span>
 										</p>
@@ -230,6 +262,13 @@
 						</div>
 					</div>
 				</div>
+				<?php
+					} else {
+						?>
+						<h3 class="page-title" style="color: #000; text-align:center;">Ваша корзина пуста</h3>
+					<?php
+					}
+				?>
 		</div>
 	</div>
 <!-- checkout  content section end -->
@@ -239,6 +278,7 @@
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
 	?>
 <!-- quick view end -->
+<script src="/js/script.js"></script>
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
 ?>

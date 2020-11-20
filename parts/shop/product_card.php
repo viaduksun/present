@@ -16,7 +16,7 @@
 		<div class="product-dsc">
 			<h3><a href="#"><?php echo $row['title'] ?></a></h3>
 			<div class="star-price">
-				<span class="price-left">$<?php echo $row['price'] ?></span>
+				<span class="price-left"><?php echo $row['price'] ?> грн.</span>
 				<span class="star-right">
 					<i class="fa fa-star"></i>
 					<i class="fa fa-star"></i>
@@ -28,7 +28,7 @@
 		</div>
 		<div class="actions-btn">
 			<a href="#" data-placement="top" data-target="#quick-view" data-trigger="hover" data-toggle="modal" data-original-title="Посмотреть"><i class="fa fa-eye"></i></a>
-			<a href="#" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></a>
+			<a class="add-to-cart" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></a>
 		</div>
 	</div>
 </div>
