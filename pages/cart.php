@@ -183,7 +183,7 @@
 																<em>*</em>
 															</label>
 															<div class="di-na bs">
-																<input class="form-control" type="text" required="" name="address"  placeholder="Street address">
+																<input class="form-control" type="text" required="" name="address"  placeholder="Адрес">
 															</div>
 														</div>
 														<div class="col-md-12">
@@ -278,7 +278,6 @@
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
 	?>
 <!-- quick view end -->
-<script src="/js/input.js"></script>
 <script src="/js/script.js"></script>
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"

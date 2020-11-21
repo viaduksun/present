@@ -1,4 +1,4 @@
-const linkSite = "http://present.local/";
+var linkSite = "http://present.local/";
 
 function addCart(add){
 		const addRequest = new XMLHttpRequest();
@@ -18,10 +18,10 @@ document.querySelectorAll('.change-quant').forEach(function(input){
 			input.value = input.attributes.max.value;
 			alert('Слишком много! Нет в наличии. Есть только: ' + input.attributes.max.value + ' шт.')
 		}
-		changeAllSum(input)
+		changeAllSum(input);
 	}
 	input.oninput = function(){
-		changeAllSum(input)
+		changeAllSum(input);
 	}
 });
 
