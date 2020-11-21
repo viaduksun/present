@@ -13,8 +13,20 @@ function addCart(add){
 }
 
 document.querySelectorAll('.change-quant').forEach(function(input){
+	input.onkeyup = function() {
+		if (Number(input.value) > Number(input.attributes.max.value)) {
+			input.value = input.attributes.max.value;
+			alert('Слишком много! Нет в наличии. Есть только: ' + input.attributes.max.value + ' шт.')
+		}
+		changeAllSum(input)
+	}
 	input.oninput = function(){
-		input.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.innerText = input.value * input.dataset.price;
+		changeAllSum(input)
+	}
+});
+
+function changeAllSum(input){
+	input.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.innerText = input.value * input.dataset.price;
 		const index = input.parentNode.parentNode.parentNode.rowIndex;
 		document.querySelector('.cart-card').children[index].children[0].children[2].children[1].children[0].innerText = "× " + input.value;
 		document.querySelector('.cart-card').children[index].children[0].children[2].children[2].children[0].innerText = input.value * input.dataset.price;
@@ -27,8 +39,7 @@ document.querySelectorAll('.change-quant').forEach(function(input){
 		chngeRequest.open("POST", linkSite + "modules/cart/change-quant.php", false);
 		chngeRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		chngeRequest.send("id=" + input.dataset.id + "&quant=" + input.value);
-	}
-});
+}
 
 function checkQuant(){
 	const quantSum = document.querySelector('.all-quant');

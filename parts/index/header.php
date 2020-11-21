@@ -9,7 +9,7 @@
 				<link rel="shortcut icon" type="image/x-icon" href="/img/logo2.png">
 
 				<!-- HelloPreload http://hello-site.ru/preloader/ -->
-				<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #BE90D4 url(http://hello-site.ru//main/images/preloads/hearts.svg) center center no-repeat;background-size:180px;}</style>
+				<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #BE90D4 url(http://hello-site.ru//main/images/preloads/hearts.svg) center center no-repeat;background-size:180px;}</style>
 					<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
 					<script type="text/javascript">
 					var hellopreloader = document.getElementById("hellopreloader_preload");
@@ -25,7 +25,7 @@
 										fadeOutnojquery(hellopreloader);
 								},700);
 					};
-        </script> -->
+        </script>
         <!-- HelloPreload http://hello-site.ru/preloader/ -->
 
 		<!-- google fonts -->

@@ -100,7 +100,7 @@
 																				</td>
 																				<td class="sop-cart">
 																					<div class="tb-product-price font-noraure-3">
-																						<input class="change-quant" data-id="<?php echo $product["id"] ?>" data-price="<?php echo $product["price"] ?>" type="number" min="0" max="15" value="<?php echo $basket['basket'][$i]['quant'] ?>">
+																						<input class="change-quant" data-id="<?php echo $product["id"] ?>" data-price="<?php echo $product["price"] ?>" type="number" min="0" max="<?php echo $product["count"] ?>" value="<?php echo $basket['basket'][$i]['quant'] ?>">
 																					</div>
 																				</td>
 																				<td class="cen">
@@ -278,6 +278,7 @@
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
 	?>
 <!-- quick view end -->
+<script src="/js/input.js"></script>
 <script src="/js/script.js"></script>
 <?php
 	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
