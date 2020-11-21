@@ -1,16 +1,13 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/admin/configs/variables.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
-
 // кнопка нажата
 if (isset($_GET['save'])) {
 
     $sql = "UPDATE users SET name = '" . $_GET["name"] . "', updated_at = current_timestamp, email = '" . $_GET["email"] . "' WHERE users.id =" . $_GET['id'];
     $result = $conn->query($sql);
-    // var_dump(expression)
-    // header('Location: http://present.local/admin/pages/users.php');
+    header('Location: http://present.local/admin/pages/users.php');
 }
+include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
 ?>
 <!-- pages-title-start -->
 <section class="contact-img-area">

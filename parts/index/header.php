@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/css/responsive.css">
 		<!-- modernizr css -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/script.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>

@@ -1,6 +1,6 @@
 <?php
   include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
-    include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
+    
     include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
    
     ?>  
@@ -28,42 +28,16 @@
                                     <div class="tab-content"> 
                                         <div role="tabpanel" class="tab-pane active" id="home">
                                             <div class="row">
-                                                <div class="shop-tab">
+                                                <div class="shop-tab" id="shop_place_for_cards">
                                                     <!-- КАРТОЧКА ПРОДУКТА start -->
-                                                    <?php 
-                                                        // =========================
-                                                        // Настройка пагинации
-                                                        // =========================
-                                                        if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];
-
-                                                        $count_query = $conn->query("SELECT COUNT(*) FROM products");
-                                                        $count_array = $count_query->fetch_array(MYSQLI_NUM);
-                                                        $count = $count_array[0];
-
-                                                        $limit = 6;
-                                                        $start = ($page*$limit)-$limit;
-                                                        $length = ceil($count/$limit);
-                                                        // echo $length;
-
-                                                        $sql = "SELECT * FROM products  WHERE category =" . $_GET['category_id'] ." LIMIT $start, $limit";
-                                                        $result = $conn->query($sql);
-                                                        $p = 1;
-                                                                                                                
-                                                        // =========================
-                                                        // Окончание пагинации
-                                                        // =========================
-                                                        while ($row = mysqli_fetch_assoc($result)) {
-
-                                                        include '../parts/shop/product_card.php';
-                                                        }     
-                                                           
-                                                        ?>
+                                                    
                                                     <!-- КАРТОЧКА ПРОДУКТА end -->
                                                 </div>
                                             </div>
                     </div>
                   <!-- отображение строками!!!!! START-->
                                      <?php
+                                        // include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
                                         include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/product_card_string.php"
                                     ?>                                       
                                     <!-- отображение строками!!!!! END-->
@@ -117,6 +91,7 @@
       ?>
     <!-- quick view end -->
 <?php
+include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
   include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
 ?>
 
