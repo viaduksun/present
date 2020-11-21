@@ -189,14 +189,14 @@
 														<div class="col-md-12">
 															<div class="di-na bs">
 																<label class="l-contact">
-																		Order Notes
+																		Детали (пожелания)
 																</label>
-																<textarea class="input-text" name="details" placeholder="Notes about your order, e.g. special notes for delivery." ></textarea>
+																<textarea class="input-text" name="details" placeholder="Примечания к вашему заказу, например особые примечания к доставке." ></textarea>
 															</div>
 														</div>
 														<div class="col-md-12 text-center">
 															<p class="checkout-coupon">
-																<input type="submit" name="order" value="CONTINUE">
+																<input type="submit" name="order" value="Вперёд">
 															</p>
 														</div>
 													</div>
