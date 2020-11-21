@@ -11,12 +11,12 @@
                     ?> 
 
                     <div class="re-img">
-                        <a href="single_product_page.php?productId=<?php echo $row['id'] ?>">               
+                        <a href="/parts/shop/single_product_page.php?productId=<?php echo $row['id'] ?>">               
                             <img src="/img/products/<?php echo $row['image'] ?>"/>
                          </a>
                     </div>
                     <div class="actions-btn">
-                        <a data-original-title="Quick View" data-toggle="modal" data-trigger="hover" data-target="#quick-view" data-placement="top" href="#">
+                        <a data-original-title="просмотреть" data-toggle="modal" data-trigger="hover" data-target="#quick-view" data-placement="top" href="#">
                         <i class="fa fa-eye"></i>
                         </a>
                     </div>
@@ -37,14 +37,7 @@
                     <div class="last-cart l-mrgn ns">
                         <a class="las4" href="#" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину" onclick="addCart(this)">В корзину</a>                        
                     </div>
-                    <div class="tb-product-btn">
-                        <a href="#">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
+		<!-- quick view end -->

@@ -6,7 +6,7 @@
 				}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
 				} 
 				?>
-		<a href="#">
+		<a href="/parts/shop/single_product_page.php?productId=<?php echo $row['id'] ?>" class="link-height">
 			<img src="/img/products/<?php echo $row['image'] ?>" alt="Product Title" />
 			<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
 		</a>
