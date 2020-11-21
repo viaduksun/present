@@ -9,13 +9,13 @@
 		<section class="pages products-page section-padding-top section-padding-bottom">
 			<div class="container">
 				<div class="row">
+
                 <!-- SIDEBAR START -->
 				    <?php
                         include $_SERVER["DOCUMENT_ROOT"] . '/parts/shop/sidebar.php';
                      ?>
                     <!-- SIDEBAR END -->
-
-
+				    
                     <div class="col-md-8 col-lg-9 col-sm-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -30,14 +30,34 @@
                                     <div class="tab-content"> 
                                         <div role="tabpanel" class="tab-pane active" id="home">
                                             <div class="row">
-                                                <div class="shop-tab">
+                                                <div class="shop-tab" id="shop_place_for_cards">
                                                     <!-- КАРТОЧКА ПРОДУКТА start -->
                                                     <?php 
                                                         // =========================
                                                         // Настройка пагинации
                                                         // =========================
-                                                        if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];
+                                                        if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];                                                        
+                                                        // echo $length;
+                                                        // ==================================================
+                                                        if (isset($_COOKIE["cookie_current_category_id"])) {
+                                                        // длина пагинации для определенной категории
+                                                        $count_query = $conn->query("SELECT COUNT(*) FROM products WHERE category =" . $_COOKIE["cookie_current_category_id"]);
+                                                        $count_array = $count_query->fetch_array(MYSQLI_NUM);
+                                                        $count = $count_array[0];
 
+                                                        $limit = 6;
+                                                        $start = ($page*$limit)-$limit;
+                                                        $length = ceil($count/$limit);
+                                                        $p = 1;
+
+                                                        $sql = "SELECT * FROM products WHERE category =" . $_COOKIE["cookie_current_category_id"] ."  LIMIT $start, $limit";
+                                                        $result = $conn->query($sql);                               
+                                                        
+                                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                            include '../parts/shop/product_card.php';
+                                                            }
+                                                            }  else { 
+                                                        // длина пагинации для всех товаров суммарно
                                                         $count_query = $conn->query("SELECT COUNT(*) FROM products");
                                                         $count_array = $count_query->fetch_array(MYSQLI_NUM);
                                                         $count = $count_array[0];
@@ -45,19 +65,15 @@
                                                         $limit = 6;
                                                         $start = ($page*$limit)-$limit;
                                                         $length = ceil($count/$limit);
-                                                        // echo $length;
+                                                        $p = 1;  
 
-                                                        $sql = "SELECT * FROM products ORDER BY id LIMIT $start, $limit";
-                                                        $result = $conn->query($sql);
-                                                        $p = 1;
+                                                        $sql = "SELECT * FROM products LIMIT $start, $limit";
+                                                        $result = $conn->query($sql);                               
                                                         
-                                                        // =========================
-                                                        // Окончание пагинации
-                                                        // =========================
-                                                        while ($row = mysqli_fetch_assoc($result)) {
-
-                                                        include '../parts/shop/product_card.php';
-                                                        }     
+                                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                            include '../parts/shop/product_card.php';
+                                                            }
+                                                        }                                                       
                                                            
                                                         ?>
                                                     <!-- КАРТОЧКА ПРОДУКТА end -->
