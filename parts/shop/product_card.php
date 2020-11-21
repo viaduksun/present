@@ -4,7 +4,7 @@
 			
 
 				<?php 
-				// Задание статуса товара либо NEW либо ничего (в БД графа status 1 / 0)
+				// Задание статуса товара 1- NEW 2-SALE 0 - пусто (в БД графа status 1 / 2/ 0)
 				if ($row['status']== 1) {?> <div class="pro-type"><span >new</span></div> <?php
 				}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
 				} 

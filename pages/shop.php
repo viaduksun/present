@@ -1,7 +1,7 @@
 <?php
-	include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
-  include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
-  include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
+    include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
+    include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
+    include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
 ?>
         <!-- shopheader-start -->		
 		<!-- shopheader-end -->
@@ -16,7 +16,7 @@
                      ?>
                     <!-- SIDEBAR END -->
 				    
-                    <div class="col-md-8 col-lg-9 col-sm-12">
+                    <div class="col-md-8 col-lg-9 col-sm-12" id="shop_place_for_cards"> <!-- Этот див используется в AJAX для замены его содержимого -->
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="features-tab">
@@ -30,7 +30,8 @@
                                     <div class="tab-content"> 
                                         <div role="tabpanel" class="tab-pane active" id="home">
                                             <div class="row">
-                                                <div class="shop-tab" id="shop_place_for_cards">
+                                                <!-- В этот ДИВ помещаем AJAX response после сработки функции function categorySelect(category) -->
+                                                <div class="shop-tab" >
                                                     <!-- КАРТОЧКА ПРОДУКТА start -->
                                                     <?php 
                                                         // =========================
@@ -134,7 +135,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  <!-- Этот див используется в AJAX для замены его содержимого -->
+
+
+
 				</div>
 			</div>
 		</section>

@@ -320,9 +320,14 @@ $(".pro-img-tab-slider").owlCarousel({
 var siteURL = "http://present.local/";
 
 function categorySelect(category) {
+// выбираем все элементы с классом "current-cat" и запускаем цикл-функцию
+// которая либо добавит либо удалит текст(тот что в скобках) в классе искомых элементов
+document.querySelectorAll('.current-cat').forEach(function(item){
+  item.classList.toggle("current-cat");
+});  
 // Вывод в консоль ID категории по которой кликнули (dataset - занесли пользовательский атрибут)
-console.dir(category.dataset.category_id);
-console.dir(category);
+// console.dir(category.dataset.category_id);
+// console.dir(category);
 // Формируем AJAX 
 var ajax = new XMLHttpRequest();
 // Задаем характеристики ajax
@@ -341,16 +346,23 @@ var productsBlock = document.querySelector("#shop_place_for_cards");
 // Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
   productsBlock.innerHTML = response;
 
-category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
+// var activecategory = document.getElementsByClassName('cat-item current-cat');
+// console.dir(activecategory)
+// activecategory.className = "cat-item";
+// category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
 // category.parentNode.parentNode.children.className = "cat-item";
 category.parentNode.className = "cat-item current-cat";
 
 // console.dir(response);
 }
 
-function cookie_remove(all) {  
-
-console.dir(all);
+function cookie_remove(all) { 
+ // выбираем все элементы с классом "current-cat" и запускаем цикл-функцию
+ // которая либо добавит либо удалит текст(тот что в скобках) в классе искомых элементов
+document.querySelectorAll('.current-cat').forEach(function(item){
+  item.classList.toggle("current-cat");
+});  
+// console.dir(all);
 // Формируем AJAX 
 var ajax = new XMLHttpRequest();
 // Задаем характеристики ajax
@@ -367,10 +379,16 @@ var response = ajax.response;
 // Выбираем ДИВ с карточками продуктов
 var productsBlock = document.querySelector("#shop_place_for_cards");
 // Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
-productsBlock.innerHTML = response;
+// productsBlock.innerHTML = response;
 
-// category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
+// console.dir(all.parentNode.parentNode.parentNode.childNodes[3].children);
+// all.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
 // category.parentNode.parentNode.children.className = "cat-item";
+
+
+// var activecategory = document.getElementsByClassName('cat-item current-cat');
+// console.dir(activecategory)
+// activecategory.className = "cat-item";
 all.parentNode.className = "cat-item current-cat";
 // console.dir(response);
 }

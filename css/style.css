@@ -739,6 +739,8 @@ i.pe-7s-back {transform: rotateY(-180deg);}
   overflow: hidden;
   position: relative;
   text-align: center;
+  width: 102%;
+
 }
 
 .banner-box a {
@@ -927,7 +929,7 @@ i.pe-7s-back {transform: rotateY(-180deg);}
 	position: relative;
 }
 .banner-box.banner-box-re {
-  margin-bottom: 36px;
+  margin-bottom: 11px;
 }
 .product-img a::before, .banner-box a::before, .post-thumb a::before, .re-img a::before {
   background: #000;

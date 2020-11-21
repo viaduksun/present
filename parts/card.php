@@ -1,16 +1,20 @@
+	
 	<div class="product-img">
-		<div class="pro-type">
-			<span>new</span>
-		</div>
+		<?php 
+		// Задание статуса товара 1- NEW 2-SALE 0 - пусто (в БД графа status 1 / 2/ 0)
+				if ($row['status']== 1) {?> <div class="pro-type"><span >new</span></div> <?php
+				}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
+				} 
+				?>
 		<a href="#">
-			<img src="/img/products/41.jpg" alt="Product Title" />
+			<img src="/img/products/<?php echo $row['image'] ?>" alt="Product Title" />
 			<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
 		</a>
 	</div>
 	<div class="product-dsc">
-		<h3><a href="#">Product Title</a></h3>
+		<h3><a href="#"><?php echo $row['title'] ?></a></h3>
 		<div class="star-price">
-			<span class="price-left">$52.00</span>
+			<span class="price-left"><?php echo $row['price'] ?> грн.</span>
 			<span class="star-right">
 				<i class="fa fa-star"></i>
 				<i class="fa fa-star"></i>
@@ -21,6 +25,6 @@
 		</div>
 	</div>
 	<div class="actions-btn">
-		<a href="#" data-placement="top" data-target="#quick-view" data-trigger="hover" data-toggle="modal" data-original-title="Посмотреть"><i class="fa fa-eye"></i></a>
-		<a href="#" data-toggle="tooltip" data-placement="top" title="В корзину"><i class="fa fa-shopping-cart"></i></a>
+			<a href="#" data-placement="top" data-target="#quick-view" data-trigger="hover" data-toggle="modal" data-original-title="Посмотреть"><i class="fa fa-eye"></i></a>
+			<a class="add-to-cart" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину" onclick="addCart(this)"><i class="fa fa-shopping-cart"></i></a>
 	</div>

@@ -1,5 +1,6 @@
 <?php
-	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php"
+	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
+	include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
 ?>
 
 	<!-- slider-section-start -->
@@ -69,64 +70,89 @@
 								</div>
 							</div>
 						</div>
+						
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-container banner-box res-btm">
-                                <a href="/pages/product_category.php?category_id=4" >
-                                    <img alt="" src="/img/products/46.jpg">
+                            	<?php 
+											$sql = "SELECT * FROM categories WHERE id = 1";
+				                            $result = $conn->query($sql);
+				                            $row = mysqli_fetch_assoc($result);
+										?>
+                            	<a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                    <img alt="" src="/img/products/15.jpg">
                                     <div>
-                                        <h2>
-                                            Cамые вкусные!
-                                        </h2>
-                                        <p>Фруктовые боксы. Самые свежие фрукты!</p>
+                                    	
+                                        <h2><?php echo $row['title'] ?></h2>
+                                        <p>Подарочные наборы косметики.<br>Это универсальный подарок, который порадует каждого!</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-box banner-box-re">
-                                <a href="/pages/product_category.php?category_id=1" class="link-height">
-                                    <img alt="" src="/img/products/11.jpg" class="image-center">
+                            	<?php 
+											$sql = "SELECT * FROM categories WHERE id = 2";
+				                            $result = $conn->query($sql);
+				                            $row = mysqli_fetch_assoc($result);
+
+										?>
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                    <img alt="" src="/img/products/26.jpg" class="image-center">
                                     <div>
-                                        <h2>
-                                            Качественные!
-                                        </h2>
-                                        <p>Боксы косметики. Вы оценете!</p>
+                                    	
+                                        <h2><?php echo $row['title'] ?></h2>
+                                        <p>Стильная и романтическая корзина сладостей.<br>Отличный выбор для дорогой сладкоежки!</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="banner-box res-btm">
-                                <a href="/pages/product_category.php?category_id=2" class="link-height">
-                                    <img alt="" src="/img/products/22.jpg" class="image-center">
+                            	<?php 
+											$sql = "SELECT * FROM categories WHERE id = 3";
+				                            $result = $conn->query($sql);
+				                            $row = mysqli_fetch_assoc($result);
+
+										?>
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                    <img alt="" src="/img/products/35.jpg" class="image-center">
                                     <div>
-                                        <h2>
-                                            Оригинальные и вкусные
-                                        </h2>
-                                        <p>Sweet boxes!</p>
+                                    	
+                                        <h2><?php echo $row['title'] ?></h2>
+                                        <p>Подарочные наборы игрушек.<br>Это  подарок, который порадует детей и подростков!</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="banner-box banner-box-re">
-                                <a href="/pages/product_category.php?category_id=3" class="link-height">
-                                    <img alt="" src="/img/products/33.jpg" class="image-center">
-                                    <div>
-                                        <h2>
-                                            Порадуйте вашего ребенка с
-                                        </h2>
-                                        <p>Сюрприз боксом для детей!</p>
+                            	<?php 
+											$sql = "SELECT * FROM categories WHERE id = 4";
+				                            $result = $conn->query($sql);
+				                            $row = mysqli_fetch_assoc($result);
+
+										?>
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                    <img alt="" src="/img/products/49.jpg" class="image-center">
+                                   <div>
+                                    	
+                                        <h2><?php echo $row['title'] ?></h2>
+                                        <p>Подарочные наборы экзотических фруктов.<br>Вкусный подарок, который станет отличным украшением вашего праздничного стола!</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="banner-box">
-                                <a href="/pages/product_category.php?category_id=5" class="link-height">
+                            	<?php 
+											$sql = "SELECT * FROM categories WHERE id = 5";
+				                            $result = $conn->query($sql);
+				                            $row = mysqli_fetch_assoc($result);
+
+										?>
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
                                     <img alt="" src="/img/products/54.jpg" class="image-center">
                                     <div>
-                                        <h2>
-                                            Только у нас
-                                        </h2>
-                                        <p>Самые оригинальные флористы составляют flower boxes!</p>
+                                    	
+                                        <h2><?php echo $row['title'] ?></h2>
+                                        <p>Подарочные букеты.<br>Миниатюрные букеты составленные профессиональными флористами</p>
                                     </div>
                                 </a>
                             </div>
@@ -152,116 +178,143 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="product-tab nav nav-tabs">
+					<?php 
+						$sql = "SELECT * FROM categories WHERE id =1";
+                        $result = $conn->query($sql);
+                        $row = mysqli_fetch_assoc($result);
+					?> 
 					<ul>                                        
-						<li class="active"><a data-toggle="tab" href="#all">все</a></li>
-						<li><a data-toggle="tab" href="#clothings">рамки</a></li>
-						<li><a data-toggle="tab" href="#shoes">картины</a></li>
-						<li><a data-toggle="tab" href="#bags">пазлы</a></li>
-						<li><a data-toggle="tab" href="#accessories">магниты</a></li>
+						<li class="active"><a data-toggle="tab" href='#cosmethics'><?php echo $row['title']?></a></li>				
+						<?php 
+						$sql = "SELECT * FROM categories WHERE id =2";
+                        $result = $conn->query($sql);
+                        $row = mysqli_fetch_assoc($result);
+                        ?> 
+						<li><a data-toggle='tab' href='#sweets'><?php echo $row['title']?></a></li>
+
+						<?php 
+						$sql = "SELECT * FROM categories WHERE id =3";
+                        $result = $conn->query($sql);
+                        $row = mysqli_fetch_assoc($result);
+                        ?> 
+						<li><a data-toggle='tab' href='#toys'><?php echo $row['title']?></a></li>
+
+						<?php 
+						$sql = "SELECT * FROM categories WHERE id =4";
+                        $result = $conn->query($sql);
+                        $row = mysqli_fetch_assoc($result);
+                        ?> 
+						<li><a data-toggle='tab' href='#fruits'><?php echo $row['title']?></a></li>
+
+						<?php 
+						$sql = "SELECT * FROM categories WHERE id =5";
+                        $result = $conn->query($sql);
+                        $row = mysqli_fetch_assoc($result);
+                        ?> 
+						<li><a data-toggle='tab' href='#flowers'><?php echo $row['title']?></a></li>						 
+						 					
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="row tab-content">
-			<div class="tab-pane  fade in active" id="all">
+			<div class="tab-pane  fade in active" id="cosmethics">
 				<div id="tab-carousel-1" class="re-owl-carousel owl-carousel product-slider owl-theme">
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
+					<!-- ========Слайдер на категорию "КОСМЕТИКА" =============== -->						
+						<?php
+							$sql = "SELECT * FROM products WHERE category = 1 LIMIT 8";
+                            $result = $conn->query($sql);
+                            while ($row = mysqli_fetch_assoc($result)) { ?>     
+					<div class="col-xs-12">
+						<div class='single-product'>					                         
+                            <?php                                
+                                include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php";
+                            ?>
+                        </div>
 					</div>
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						<?php }  ?>						
+					<!-- ==========слайдер end================================= -->
 				</div>
 			</div>
 			<!-- all shop product end -->
 
-			<div class="tab-pane  fade in" id="clothings">
+			<div class="tab-pane  fade in" id="sweets">
 				<div id="tab-carousel-2" class="owl-carousel product-slider owl-theme">
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
+					<!-- ========Слайдер на категорию "СЛАДОСТИ" =============== -->						
+						<?php
+							$sql = "SELECT * FROM products WHERE category = 2 LIMIT 8";
+                            $result = $conn->query($sql);
+                            while ($row = mysqli_fetch_assoc($result)) { ?>     
+					<div class="col-xs-12">
+						<div class='single-product'>					                         
+                            <?php                                
+                                include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php";
+                            ?>
+                        </div>
 					</div>
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
-					</div>
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
-					</div>
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
-					</div>
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
-					</div>
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						<?php }  ?>						
+					<!-- ==========слайдер end================================= -->
 					<!-- single product end -->
 				</div>
 			</div>
 			<!-- clothings product end -->
-			<div class="tab-pane  fade in" id="shoes">
+			<div class="tab-pane  fade in" id="toys">
 				<div id="tab-carousel-3" class="owl-carousel product-slider owl-theme">
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
+					<!-- ========Слайдер на категорию "СЛАДОСТИ" =============== -->						
+						<?php
+							$sql = "SELECT * FROM products WHERE category = 3 LIMIT 8";
+                            $result = $conn->query($sql);
+                            while ($row = mysqli_fetch_assoc($result)) { ?>     
+					<div class="col-xs-12">
+						<div class='single-product'>					                         
+                            <?php                                
+                                include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php";
+                            ?>
+                        </div>
 					</div>
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						<?php }  ?>						
+					<!-- ==========слайдер end================================= -->
 					<!-- single product end -->
 				</div>
 			</div>
 			<!-- shoes product end -->
-			<div class="tab-pane  fade in" id="bags">
+			<div class="tab-pane  fade in" id="fruits">
 				<div id="tab-carousel-4" class="owl-carousel product-slider owl-theme">
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
+					<!-- ========Слайдер на категорию "СЛАДОСТИ" =============== -->						
+						<?php
+							$sql = "SELECT * FROM products WHERE category = 4 LIMIT 8";
+                            $result = $conn->query($sql);
+                            while ($row = mysqli_fetch_assoc($result)) { ?>     
+					<div class="col-xs-12">
+						<div class='single-product'>					                         
+                            <?php                                
+                                include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php";
+                            ?>
+                        </div>
 					</div>
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						<?php }  ?>						
+					<!-- ==========слайдер end================================= -->
 					<!-- single product end -->
 				</div>
 			</div>
 			<!-- bags product end -->
-			<div class="tab-pane  fade in" id="accessories">
+			<div class="tab-pane  fade in" id="flowers">
 				<div id="tab-carousel-5" class="owl-carousel product-slider owl-theme">
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->	
-					<div class="col-xs-12">	
-						<div class="single-product">
-							<?php
-								include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php"
-							?>
-						</div>
+					<!-- ========Слайдер на категорию "СЛАДОСТИ" =============== -->						
+						<?php
+							$sql = "SELECT * FROM products WHERE category = 5 LIMIT 8";
+                            $result = $conn->query($sql);
+                            while ($row = mysqli_fetch_assoc($result)) { ?>     
+					<div class="col-xs-12">
+						<div class='single-product'>					                         
+                            <?php                                
+                                include $_SERVER["DOCUMENT_ROOT"] . "/parts/card.php";
+                            ?>
+                        </div>
 					</div>
-					<!-- ТАКИХ КАРТОЧЕК НУЖНО 5 ШТУК -->
+						<?php }  ?>						
+					<!-- ==========слайдер end================================= -->
+					<!-- single product end -->
 				</div>
 			</div>
 			<!-- accessories product end -->
@@ -275,24 +328,34 @@
 				<div class="container">
 					<div class="row">
 						<div class="re-testimonials-all re-owl-carousel2">
-								<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
+	<!-- ====================================================================================================== -->
+										<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
 							<div class="re-testimonials-all-slider">
 								<div class="col-md-4 col-sm-12 col-xs-12">
 									<div class="sale-curosel1">
+									<?php
+									$sql = "SELECT * FROM products WHERE id = 19";
+                            		$result = $conn->query($sql);
+                           			$row = mysqli_fetch_assoc($result) ?> 
+									?>	
 											<div class="product-img">
-												<div class="pro-type">
-													<span>sale</span>
-												</div>
+												<?php 
+													// Задание статуса товара 1- NEW 2-SALE 0 - пусто (в БД графа status 1 / 2/ 0)
+													if ($row['status']== 1) {?> <div class="pro-type"><span >new</span></div> <?php
+													}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
+													} 
+												?>				
 												<a href="#">
-													<img alt="Product Title" src="/img/products/2.jpg">
+													<img src="/img/products/<?php echo $row['image'] ?>"/>											
 												</a>
 											</div>
+											
 									</div>
 								</div>
 								<div class="col-md-8 col-sm-12 col-xs-12">
 									<div class="product-content">
 											<div class="re-text">
-												<h5><a href="#">Etiam molestie</a></h5>
+												<h5><a href="#"><?php echo $row['title'] ?></a></h5>
 											</div>
 											<div class="pro-rating">
 												<a href="#"><i class="fa fa-star"></i></a>
@@ -302,9 +365,56 @@
 												<a href="#"><i class="fa fa-star"></i></a>
 												<!-- <a href="#"><i class="fa fa-star-o"></i></a> -->
 											</div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.</p>
-											<span class="old-price">230.00 ГРН</span>
-											<span class="pro-price">200. ГРН</span>
+											<p><?php echo $row['description'] ?></p>
+											<span class="old-price"><?php echo $row['price'] + 100 ?> ГРН</span>
+											<span class="pro-price"><?php echo $row['price'] ?> ГРН</span>
+											<div class="timer">
+												<div data-countdown="2020/12/12"></div>
+											</div>														
+									</div>
+								</div>
+							</div>
+								<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
+		<!-- ==================================================================================================== -->
+									<!-- КАРТОЧКА СЛАЙДЕРА. 2 ШТУКИ МИНИМУМ -->
+							<div class="re-testimonials-all-slider">
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<div class="sale-curosel1">
+									<?php
+									$sql = "SELECT * FROM products WHERE id = 22";
+                            		$result = $conn->query($sql);
+                           			$row = mysqli_fetch_assoc($result) ?> 
+									?>	
+											<div class="product-img">
+												<?php 
+													// Задание статуса товара 1- NEW 2-SALE 0 - пусто (в БД графа status 1 / 2/ 0)
+													if ($row['status']== 1) {?> <div class="pro-type"><span >new</span></div> <?php
+													}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
+													} 
+												?>				
+												<a href="#">
+													<img src="/img/products/<?php echo $row['image'] ?>"/>											
+												</a>
+											</div>
+											
+									</div>
+								</div>
+								<div class="col-md-8 col-sm-12 col-xs-12">
+									<div class="product-content">
+											<div class="re-text">
+												<h5><a href="#"><?php echo $row['title'] ?></a></h5>
+											</div>
+											<div class="pro-rating">
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<a href="#"><i class="fa fa-star"></i></a>
+												<!-- <a href="#"><i class="fa fa-star-o"></i></a> -->
+											</div>
+											<p><?php echo $row['description'] ?></p>
+											<span class="old-price"><?php echo $row['price'] + 100 ?> ГРН</span>
+											<span class="pro-price"><?php echo $row['price'] ?> ГРН</span>
 											<div class="timer">
 												<div data-countdown="2020/12/12"></div>
 											</div>														
