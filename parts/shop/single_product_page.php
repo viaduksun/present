@@ -59,7 +59,7 @@ $row = mysqli_fetch_assoc($result);
 												<p><?php echo $row['description'] ?></p>
 										</div>
 										<div class="pre-box">
-												<span class="special-price"><?php echo $row['price'] ?> .грн</span>
+												<span class="special-price"><?php echo $row['price'] ?> грн.</span>
 										</div>
 										<div class="add-to-box1">
 												<div class="add-to-box add-to-box2">
