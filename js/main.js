@@ -320,14 +320,19 @@ $(".pro-img-tab-slider").owlCarousel({
 var siteURL = "http://present.local/";
 
 function categorySelect(category) {
+// Вывод в консоль ID категории по которой кликнули (dataset - занесли пользовательский атрибут)
+// console.dir(category.dataset.category_id);
+// console.dir(category.dataset.prod_count);
+// console.dir(category.dataset.category_id);
+// console.dir(category);
+
+
 // выбираем все элементы с классом "current-cat" и запускаем цикл-функцию
 // которая либо добавит либо удалит текст(тот что в скобках) в классе искомых элементов
 document.querySelectorAll('.current-cat').forEach(function(item){
   item.classList.toggle("current-cat");
 });  
-// Вывод в консоль ID категории по которой кликнули (dataset - занесли пользовательский атрибут)
-// console.dir(category.dataset.category_id);
-// console.dir(category);
+
 // Формируем AJAX 
 var ajax = new XMLHttpRequest();
 // Задаем характеристики ajax
@@ -341,6 +346,7 @@ ajax.send("current_category_id=" + category.dataset.category_id);
 // console.dir(ajax.response);
 var response = ajax.response;
 
+
 // Выбираем ДИВ с карточками продуктов
 var productsBlock = document.querySelector("#shop_place_for_cards");
 // Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
@@ -352,7 +358,6 @@ var productsBlock = document.querySelector("#shop_place_for_cards");
 // category.parentNode.parentNode.parentNode.childNodes[3].children.className = "cat-item"; 
 // category.parentNode.parentNode.children.className = "cat-item";
 category.parentNode.className = "cat-item current-cat";
-
 // console.dir(response);
 }
 

@@ -34,6 +34,16 @@
                         </div>
                     </div>
                     <p class="desc"><?php echo $row['description'] ?></p>
+
+                    <?php 
+                // проверка ниличия товара на складе  1- на складе 0 - нет в наличии (в БД графа availability)
+                if ($row['availability']== 1) {?> <p class="availability in-stock2">ТОВАР ЕСТЬ В НАЛИЧИИ (<span ><?php echo $row['count'] ?><p2> шт.</p2>)</span> </p> <?php
+                } elseif ($row['availability']== 0) {?><p class="availability in-stock2"> ТОВАРА НЕТ В НАЛИЧИИ </p> <?php
+                } 
+                ?>      
+
+
+
                     <div class="last-cart l-mrgn ns">
                         <a class="las4" href="#" data-id="<?php echo $row["id"] ?>" data-toggle="tooltip" data-placement="top" title="В корзину" onclick="addCart(this)">В корзину</a>                        
                     </div>

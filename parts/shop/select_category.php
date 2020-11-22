@@ -1,8 +1,7 @@
 <?php
   include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php"; 
 
-  ?>
-  
+  ?>  
 <!-- =========================================================================================== -->
  <!-- Это содержимое дива <div class="col-md-8 col-lg-9 col-sm-12" id="shop_place_for_cards"> в AJAX для замены его содержимого -->
                         <div class="row">
@@ -18,7 +17,6 @@
                                     <div class="tab-content"> 
                                         <div role="tabpanel" class="tab-pane active" id="home">
                                             <div class="row">
-                                                <!-- В этот ДИВ помещаем AJAX response после сработки функции function categorySelect(category) -->
                                                 <div class="shop-tab" >
                                                     <!-- КАРТОЧКА ПРОДУКТА start -->
                                                     <?php 
