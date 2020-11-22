@@ -1,7 +1,6 @@
 <?php
 function message_to_telegram($text) {
 	include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
-	$col = 0;
 	// Определяем общее число сообщений в базе данных
 	$res = $conn->query("SELECT * FROM telegram");
 	while ($row = mysqli_fetch_assoc($res)) {
