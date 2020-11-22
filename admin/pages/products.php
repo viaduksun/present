@@ -74,7 +74,7 @@
 				                                <td>
 				                                	
 									                
-									                  <a href="/admin/options/products/edit_product.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-primary ce5">Edit</a><br>
+									                  <a href="/admin/options/products/edit_product.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-info g6">Edit</a><br>
 									                  <a href="/admin/options/products/delete_product.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-primary ce5">Delete</a>
 									                
 									                

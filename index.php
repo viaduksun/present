@@ -97,7 +97,7 @@
 				                            $row = mysqli_fetch_assoc($result);
 
 										?>
-                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>" class="link-height">
                                     <img alt="" src="/img/products/26.jpg" class="image-center">
                                     <div>
                                     	
@@ -113,7 +113,7 @@
 				                            $row = mysqli_fetch_assoc($result);
 
 										?>
-                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>" class="link-height">
                                     <img alt="" src="/img/products/35.jpg" class="image-center">
                                     <div>
                                     	
@@ -131,7 +131,7 @@
 				                            $row = mysqli_fetch_assoc($result);
 
 										?>
-                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>" class="link-height">
                                     <img alt="" src="/img/products/49.jpg" class="image-center">
                                    <div>
                                     	
@@ -147,7 +147,7 @@
 				                            $row = mysqli_fetch_assoc($result);
 
 										?>
-                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>">
+                                <a href='/pages/shop.php' onclick='categorySelect(this)' data-category_id="<?php echo $row['id'] ?>" class="link-height">
                                     <img alt="" src="/img/products/54.jpg" class="image-center">
                                     <div>
                                     	
@@ -345,7 +345,7 @@
 													}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
 													} 
 												?>				
-												<a href="#">
+												<a href="/parts/shop/single_product_page.php?productId=<?php echo $row['id'] ?>">
 													<img src="/img/products/<?php echo $row['image'] ?>"/>											
 												</a>
 											</div>
@@ -392,7 +392,7 @@
 													}elseif ($row['status']== 2) {?><div class="pro-type_sale_status"><span >sale</span></div> <?php
 													} 
 												?>				
-												<a href="#">
+												<a href="/parts/shop/single_product_page.php?productId=<?php echo $row['id'] ?>">
 													<img src="/img/products/<?php echo $row['image'] ?>"/>											
 												</a>
 											</div>
