@@ -7,6 +7,20 @@ if (isset($_GET['save'])) {
     $result = $conn->query($sql);
     header('Location: /admin/pages/users.php');
 }
+if (isset($_GET['password'])) {
+    var_dump("password");
+    $password = md5($_GET['password']);
+    var_dump($password);
+    $sql = "INSERT INTO users (password) VALUES ('" . $password . "')";
+    if ($conn->query($sql)) {
+        ?>
+        <script>
+            alert("Вы зарегистрированы! Провертье почту и подтвердите регистрацию!");
+        </script>
+        <?php
+        header('Location: /admin/pages/users.php');
+    }
+}
 include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
 ?>
 <!-- pages-title-start -->
@@ -107,35 +121,44 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                              <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Изменить пароль<i class="fa fa-caret-down"></i></a>
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Изменить пароль пользователя<i class="fa fa-caret-down"></i></a>
                                     </h4>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
                                     <div class="row">
                                         <div class="easy2">
                                             <!-- <h2>Change Password</h2> -->
-                                            <form class="form-horizontal" action="#">
+                                            <form class="form-horizontal" action="edit.php" method="GET">
                                                 <fieldset>
                                                     <!-- <legend>Your Password</legend> -->
+                                                    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+                                                    <script type="text/javascript" src="/admin/js/my.js"></script>
+
                                                     <div class="form-group required">
                                                         <label class="col-sm-2 control-label">Пароль</label>
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="password" placeholder="password">
+                                                            <input class="form-control" value="<?php echo $row['id']?>" name="id" type="hidden">
+                                                            <input class="form-control" type="password" id="txtNewPassword" title='Пароль должен состоять минимум из 8 символов и содержать хотя бы одну цифру и один символ нижнего и верхнего регистра' type='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' required placeholder="Aa1fE4h5" >
                                                         </div>
                                                     </div>
                                                     <div class="form-group required">
                                                         <label class="col-sm-2 control-label">Подтверждене пароля</label>
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="password" placeholder="password confirm">
+                                                            <input class="form-control" type="password" id="txtConfirmPassword" onkeyup="checkPasswordMatch();" pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' required placeholder="Aa1fE4h5"/>
                                                         </div>
                                                     </div>
+                                                    <div class="col-sm-12 text-center">
+                                                        <div class="registrationFormAlert" id="divCheckPasswordMatch">
+                                                        </div>
+                                                    </div>
+
                                                 </fieldset>
                                                 <div class="buttons clearfix">
                                                     <div class="pull-left">
                                                         <a class="btn btn-default ce5" href="#">Назад</a>
                                                     </div>
                                                     <div class="pull-right">
-                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Сохранить</button>
+                                                     <button name="password" value="1" type="submit" class="btn btn-primary ce5" id="save" disabled="true">Сохранить</button>
                                                  </div>
                                              </div>
                                          </form>

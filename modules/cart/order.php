@@ -25,17 +25,22 @@
 			$order = json_decode($_COOKIE['basket'], true);
 			$sentence = "";
 			$sum = 0;
+			$comment = "";
 			for ($i = 0; $i < count($order['basket']); $i += 1){
 				$product = mysqli_fetch_assoc($conn->query("SELECT * FROM products WHERE id = " . $order['basket'][$i]["product_id"]));
 				$sentence .= $product['title'] . ' - ' . $order['basket'][$i]["quant"] . ' шт. ';
 				$sum = $sum + ($product['price'] * $order['basket'][$i]["quant"]);
+				// Если есть комментарий, то вставляем его в сообщение
+				if ($_POST["details"] != "") {
+					$comment = 'Комментарий к заказу: "' . $_POST["details"] . '". ';
+				}
 				if (($product["count"] - $order['basket'][$i]["quant"]) == 0) {
 					$conn->query("UPDATE `products` SET `count` = '" . ($product["count"] - $order['basket'][$i]["quant"]) . "', `availability` = '0' WHERE `products`.`id` = " . $order['basket'][$i]["product_id"]);
 				} else {
 					$conn->query("UPDATE `products` SET `count` = '" . ($product["count"] - $order['basket'][$i]["quant"]) . "' WHERE `products`.`id` = " . $order['basket'][$i]["product_id"]);
 				}
 			}
-			message_to_telegram('Новый заказ номер ' . ($order_id['id'] + 1) . ' от ' . $_POST["name"] . '. На сумму: ' . $sum . ' грн.. Продукция: ' . $sentence . '. Мобильный телефон клиента: ' . $_POST["phone"]);
+			message_to_telegram('Новый заказ номер ' . ($order_id['id'] + 1) . ' от ' . $_POST["name"] . '. На сумму: ' . $sum . ' грн.. Продукция: ' . $sentence . '. ' . $comment . 'Мобильный телефон клиента: ' . $_POST["phone"]);
 			setcookie("basket", "", 0, "/");
 			header("Location: /pages/cart.php");
 		}
