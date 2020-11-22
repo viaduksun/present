@@ -1,22 +1,10 @@
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php";
-    include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/header.php";
-    include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/shopheader.php";
-?>
-        <!-- shopheader-start -->		
-		<!-- shopheader-end -->
-		<!-- shop-style content section start -->
-		<section class="pages products-page section-padding-top section-padding-bottom">
-			<div class="container">
-				<div class="row">
+  include $_SERVER["DOCUMENT_ROOT"] . "/configs/db.php"; 
 
-                <!-- SIDEBAR START -->
-				    <?php
-                        include $_SERVER["DOCUMENT_ROOT"] . '/parts/shop/sidebar.php';
-                     ?>
-                    <!-- SIDEBAR END -->
-				    
-                    <div class="col-md-8 col-lg-9 col-sm-12" id="shop_place_for_cards"> <!-- Этот див используется в AJAX для замены его содержимого -->
+  ?>
+  
+<!-- =========================================================================================== -->
+ <!-- Это содержимое дива <div class="col-md-8 col-lg-9 col-sm-12" id="shop_place_for_cards"> в AJAX для замены его содержимого -->
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="features-tab">
@@ -38,43 +26,36 @@
                                                         // Настройка пагинации
                                                         // =========================
                                                         if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];                                                        
-                                                        // echo $length;
-                                                        // ==================================================
-                                                        if (isset($_COOKIE["cookie_current_category_id"])) {
-                                                        // длина пагинации для определенной категории
-                                                        $count_query = $conn->query("SELECT COUNT(*) FROM products WHERE category =" . $_COOKIE["cookie_current_category_id"]);
-                                                        $count_array = $count_query->fetch_array(MYSQLI_NUM);
-                                                        $count = $count_array[0];
+                                                         
+														// сюда из JS в переменную  $_POST передан ID выбранной категории
+														  if (isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
 
-                                                        $limit = 6;
-                                                        $start = ($page*$limit)-$limit;
-                                                        $length = ceil($count/$limit);
-                                                        $p = 1;
+														$current_category_id = $_POST['current_category_id'];
+														setcookie ("cookie_current_category_id", $current_category_id, time()+60*60, "/");
+															// =========================
+															// Настройка пагинации
+															// =========================
+															//считаем количество товаров выбранной категории ($count)
+															$count_query = $conn->query("SELECT COUNT(*) FROM products WHERE category =" . $_POST['current_category_id']);
+															$count_array = $count_query->fetch_array(MYSQLI_NUM);
+															$count = $count_array[0];
 
-                                                        $sql = "SELECT * FROM products WHERE category =" . $_COOKIE["cookie_current_category_id"] ."  LIMIT $start, $limit";
-                                                        $result = $conn->query($sql);                               
-                                                        
-                                                            while ($row = mysqli_fetch_assoc($result)) {
-                                                            include '../parts/shop/product_card.php';
-                                                            }
-                                                            }  else { 
-                                                        // длина пагинации для всех товаров суммарно
-                                                        $count_query = $conn->query("SELECT COUNT(*) FROM products");
-                                                        $count_array = $count_query->fetch_array(MYSQLI_NUM);
-                                                        $count = $count_array[0];
+															$limit = 6;
+															$start = ($page*$limit)-$limit;
+															// получаем кол страниц пагинации ceil - округление числа в большую сторону
+															$length = ceil($count/$limit);
+															// echo $length;	
 
-                                                        $limit = 6;
-                                                        $start = ($page*$limit)-$limit;
-                                                        $length = ceil($count/$limit);
-                                                        $p = 1;  
+															$sql = "SELECT * FROM products  WHERE category =" . $_POST['current_category_id'] ." LIMIT $start, $limit";
+															$result = $conn->query($sql);
+															$p = 1;                                                     
 
-                                                        $sql = "SELECT * FROM products LIMIT $start, $limit";
-                                                        $result = $conn->query($sql);                               
-                                                        
-                                                            while ($row = mysqli_fetch_assoc($result)) {
-                                                            include '../parts/shop/product_card.php';
-                                                            }
-                                                        }                                                       
+															while ($row = mysqli_fetch_assoc($result)) {
+
+															include 'product_card.php';
+															} 
+														}
+         
                                                            
                                                         ?>
                                                     <!-- КАРТОЧКА ПРОДУКТА end -->
@@ -135,21 +116,4 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  <!-- Этот див используется в AJAX для замены его содержимого -->
-
-
-
-				</div>
-			</div>
-		</section>
-		<!-- shop-style  content section end -->
-		<!-- МОДАЛЬНОЕ ОКНО. МОЖЕТ УДАЛИТЬ -->
-        <!-- quick view start -->
-		  <?php
-			include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/modal.php"
-			?>
-		<!-- quick view end -->
-		<!-- <script src="/js/script.js"></script> -->
-<?php
-	include $_SERVER["DOCUMENT_ROOT"] . "/parts/index/footer.php"
-?>
+                   

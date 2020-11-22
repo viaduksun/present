@@ -100,7 +100,7 @@
 																				</td>
 																				<td class="sop-cart">
 																					<div class="tb-product-price font-noraure-3">
-																						<input class="change-quant" data-id="<?php echo $product["id"] ?>" data-price="<?php echo $product["price"] ?>" type="number" min="0" max="15" value="<?php echo $basket['basket'][$i]['quant'] ?>">
+																						<input class="change-quant" data-id="<?php echo $product["id"] ?>" data-price="<?php echo $product["price"] ?>" type="number" min="0" max="<?php echo $product["count"] ?>" value="<?php echo $basket['basket'][$i]['quant'] ?>">
 																					</div>
 																				</td>
 																				<td class="cen">
@@ -183,20 +183,20 @@
 																<em>*</em>
 															</label>
 															<div class="di-na bs">
-																<input class="form-control" type="text" required="" name="address"  placeholder="Street address">
+																<input class="form-control" type="text" required="" name="address"  placeholder="Адрес">
 															</div>
 														</div>
 														<div class="col-md-12">
 															<div class="di-na bs">
 																<label class="l-contact">
-																		Order Notes
+																		Детали (пожелания)
 																</label>
-																<textarea class="input-text" name="details" placeholder="Notes about your order, e.g. special notes for delivery." ></textarea>
+																<textarea class="input-text" name="details" placeholder="Примечания к вашему заказу, например особые примечания к доставке." ></textarea>
 															</div>
 														</div>
 														<div class="col-md-12 text-center">
 															<p class="checkout-coupon">
-																<input type="submit" name="order" value="CONTINUE">
+																<input type="submit" name="order" value="Вперёд">
 															</p>
 														</div>
 													</div>

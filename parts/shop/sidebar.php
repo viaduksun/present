@@ -7,22 +7,23 @@
                                 <h3 class="wg-title2">Категории</h3>
                                 <ul class="product-categories">
 	<!---------------------------------ВЫВОД КАТЕГОРИЙ  ------------------------------------->
-                                    <li class='cat-item <?php if (!isset($_GET['category_id'])) { ?> current-cat <?php } ?>'>
-                                        <a href='/pages/shop.php'>All</a> <span class='count'>(10)</span>
+                                    <li class='cat-item <?php if (!isset($_COOKIE["cookie_current_category_id"])) { ?> current-cat <?php } ?>'>
+                                        <a href='/pages/shop.php' onclick="cookie_remove(this)" >All</a> <span class='count'>(10)</span>
                                     </li>
                                      <?php 
                                         $sql = "SELECT * FROM categories";
-                                        $result = $conn->query($sql);
+                                        $result = $conn->query($sql);  
                                         while ($row = mysqli_fetch_assoc($result)) {
 
-                                            if (isset($_GET['category_id']) && $_GET['category_id'] == $row['id']) {
+                                            if (isset($_COOKIE["cookie_current_category_id"]) && $_COOKIE["cookie_current_category_id"] == $row['id']) {                                                
                                                 echo " <li class='cat-item current-cat'>
-                                                         <a href='product_category.php?category_id=" . $row['id'] . " '>" . $row['title'] . " </a> <span class='count'>(10)</span>
+
+                                                         <a href='#' onclick='categorySelect(this)' data-category_id=" . $row['id'] . ">" . $row['title'] . " </a> <span class='count'>(10)</span>
                                                 </li> ";
                                             } else {
                                          
                                                 echo " <li class='cat-item '>
-                                                         <a href='product_category.php?category_id=" . $row['id'] . " '>" . $row['title'] . " </a> <span class='count'>(10)</span>
+                                                         <a href='#' onclick='categorySelect(this)' data-category_id=" . $row['id'] . ">" . $row['title'] . " </a> <span class='count'>(10)</span>
                                                 </li> ";
                                             }
                                         }
