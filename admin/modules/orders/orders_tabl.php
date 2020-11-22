@@ -1,8 +1,7 @@
-
-
+<!-- таблица вывода заказов в админке -->
 <tr>
     <form action="users.php" method="GET">
-        <td class="text-left">
+        <td class="align-middle">
             <?php echo $row['id'] ?>
         </td>
         <td class="text-left">
@@ -24,11 +23,8 @@
             <?php echo $row['status'] ?>
         </td>
         <td class="text-right">
-            <a class="btn btn-info g6" href="../modules/orders/edit.php?id=<?php echo $row['id']?>">Edit</a>
-            <a class="btn btn-danger g6" name="delete" href="../modules/orders/delete.php?id=<?php echo $row['id']?>&delete=1">Delete</a>
+            <a class="btn btn-info g6" href="../modules/orders/edit.php?id=<?php echo $row['id']?>">Подробнее</a>
+            <a class="btn btn-danger g6" name="delete" href="../modules/orders/delete.php?id=<?php echo $row['id']?>&delete=1">Удалить</a>
         </td>
     </form>
 </tr>
-
-
-

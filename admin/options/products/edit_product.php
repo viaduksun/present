@@ -80,8 +80,8 @@ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php";
                                                 
                                                 <form action = "/admin/options/products/edit_product.php?id=<?php echo $_GET["id"];?>" method = "POST">
                                                   
-                                                    <label for="formGroupExampleInput">Title "<?php echo $row['title']; ?>"</label>
-                                                    <input type="text" name="title" class="form-control" placeholder="Name"><br>
+                                                    <label for="formGroupExampleInput">Title</label>
+                                                    <input value="<?php echo $row['title']; ?>" type="text" name="title" class="form-control" placeholder="Name"><br>
                                                     
                                                     
                                                     <label for="formGroupExampleInput2">Description "<?php echo $row['description']; ?>"</label>
