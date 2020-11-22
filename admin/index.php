@@ -1,21 +1,23 @@
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
+header('Location: /admin/pages/products.php');
+include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
+
 ?>
- 
-  <!-- pages-title-start -->
-  <section class="contact-img-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="con-text">
-                            <h2 class="page-title">Главная</h2>
-                            <p><a href="/admin/">Главная</a></p>
-                        </div>
-                    </div>
+
+<!-- pages-title-start -->
+<section class="contact-img-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Главная</h2>
+                    <p><a href="/admin/">Главная</a></p>
                 </div>
             </div>
-        </section>
-		<!-- pages-title-end -->
+        </div>
+    </div>
+</section>
+<!-- pages-title-end -->
 
 <section class="collapse_area coll2">
     <div class="container">
@@ -31,5 +33,5 @@
 </section>
 
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
+include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
 ?>
