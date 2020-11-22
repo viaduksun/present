@@ -61,6 +61,7 @@
                       <ul>
                         <li><a href="/admin/pages/products.php">Товары</a></li>
                         <li><a href="/admin/pages/category.php">Категории</a></li>
+                        <li><a href="/admin/pages/bot.php">Телеграм-Бот</a></li>
                         <li><a href="/admin/pages/users.php">Пользователи</a></li>
                         <li><a href="/admin/pages/orders.php">Заказы</a></li>
                       </ul>
@@ -74,6 +75,7 @@
                         <ul>
                           <li><a href="/admin/pages/products.php">Товары</a></li>
                           <li><a href="/admin/pages/category.php">Категории</a></li>
+                          <li><a href="/admin/pages/bot.php">Телеграм-Бот</a></li>
                           <li><a href="/admin/pages/users.php">Пользователи</a></li>
                           <li><a href="/admin/pages/orders.php">Заказы</a></li>
                         </ul>
