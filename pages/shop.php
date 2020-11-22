@@ -80,7 +80,7 @@
                                                     <!-- КАРТОЧКА ПРОДУКТА end -->
                                                 </div>
                                             </div>
-										</div>
+										</div> <!-- id="home" -->
 									<!-- отображение строками!!!!! START-->
                                      <?php
                                         include $_SERVER["DOCUMENT_ROOT"] . "/parts/shop/product_card_string.php"
