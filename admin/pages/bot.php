@@ -34,6 +34,16 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
                                 <div class="easy2">
+                                    <p class="availability in-stock">
+                                        Чтобы получить <strong>ID-пользователя</strong> - отправьте текст сообщения: <strong>/my_id</strong> в чат-боте: <a href="http://t.me/getmyid_bot">http://t.me/getmyid_bot</a>.
+                                    </p>
+                                    <p class="availability in-stock">
+                                        Чтобы создать Телеграм-бота - отправьте текст сообщения: <strong>/newbot</strong> в чат-боте: <a href="http://t.me/BotFather">http://t.me/BotFather</a>.</strong>
+                                    </p>
+                                    <p class="availability in-stock">
+                                        После создания бота в сообщении будет <strong>TOKEN телеграм-бота</strong>.
+                                    </p>
+
                                     <!-- <h2>Users Account Information</h2> -->
                                     <!-- <div class="shop5">
                                         <label>Show :</label>
@@ -46,10 +56,10 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                     <table class="table table-bordered table-hover">
                                         <thead class="thead-dark">
                                             <div class="buttons clearfix">
-                                            <div class="pull-right">
-                                                <a class="btn btn-info g6" href="../modules/bot/add.php">Добавить</a><br>
-                                            </div>
-                                        </div><br>                                           
+                                                <div class="pull-right">
+                                                    <a class="btn btn-info g6" href="../modules/bot/add.php">Добавить</a><br>
+                                                </div>
+                                            </div><br>                                           
                                             <tr>
                                                 <tr>
                                                     <th class="text-center" scope="col">№</th>
