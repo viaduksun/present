@@ -1,11 +1,11 @@
+<!-- Редактирование заказа в админке -->
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
 // кнопка нажата
 if (isset($_GET['save'])) {
-
     $sql = "UPDATE users SET name = '" . $_GET["name"] . "', updated_at = current_timestamp, email = '" . $_GET["email"] . "' WHERE users.id =" . $_GET['id'];
     $result = $conn->query($sql);
-    header('Location: http://present.local/admin/pages/users.php');
+    header('Location: /admin/pages/users.php');
 }
 include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
 ?>
@@ -31,23 +31,20 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                 <div class="check">
                     <!-- <h2>Users Account</h2> -->
                 </div>
-
                 <div class="faq-accordion">
                     <div class="panel-group pas7" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
-
-
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Edit User Account<i class="fa fa-caret-down"></i></a>
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Редактирование пользователя<i class="fa fa-caret-down"></i></a>
                                     </h4>
                                 </div>
-                                
+                                <!-- таблица информации о пользователе -->
                                 <div id="collapseTwo" class="panel-collapse collapse  in" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
                                     <div class="row">
                                         <div class="easy2">
-                                            <h2>User Account Information</h2>
+                                            <!-- <h2>User Account Information</h2> -->
                                             <form class="form-horizontal" action="edit.php" method="GET">
                                                 <?php 
                                                 $sql = "SELECT * FROM users WHERE id =". $_GET["id"];
@@ -55,7 +52,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                                 $row = mysqli_fetch_assoc($result);
                                                 ?>
                                                 <fieldset>
-                                                    <legend>User Personal Details</legend>
+                                                    <!-- <legend>User Personal Details</legend> -->
                                                     <div class="form-group">
                                                         <label class="col-sm-2 control-label">ID</label>
                                                         <div class="col-sm-10">
@@ -64,7 +61,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                                         </div>
                                                     </div>
                                                     <div class="form-group required">
-                                                        <label class="col-sm-2 control-label">Name</label>
+                                                        <label class="col-sm-2 control-label">ФИО</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" name="name" value="<?php echo $row['name']?>" type="text" placeholder="Name" required>
                                                         </div>
@@ -76,76 +73,58 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="col-sm-2 control-label">Email verified</label>
+                                                        <label class="col-sm-2 control-label">Верификация</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" value="<?php echo $row['email_verified_at']?>" name="email_verified_at" type="text" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="col-sm-2 control-label">Created</label>
+                                                        <label class="col-sm-2 control-label">Дата регистрации</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" value="<?php echo $row['created_at']?>" name="created_at" type="text" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="col-sm-2 control-label">Updated</label>
+                                                        <label class="col-sm-2 control-label">Дата изменений</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" value="<?php echo $row['updated_at']?>" name="updated_at" type="text" disabled>
                                                         </div>
                                                     </div>
-
-
-                                                <!-- <legend>Your Password</legend>
-                                                <div class="form-group required">
-                                                    <label class="col-sm-2 control-label">Password</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="password" placeholder="password">
+                                                </fieldset>
+                                                <div class="buttons clearfix">
+                                                    <div class="pull-left">
+                                                        <a class="btn btn-default ce5" href="../../pages/users.php">Назад</a>
                                                     </div>
-                                                </div>
-                                                <div class="form-group required">
-                                                    <label class="col-sm-2 control-label">Password Confirm</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="password" placeholder="password confirm">
-                                                    </div>
-                                                </div> -->
-
-
-                                            </fieldset>
-                                            <div class="buttons clearfix">
-                                                <div class="pull-left">
-                                                    <a class="btn btn-default ce5" href="../../pages/users.php">Back</a>
-                                                </div>
-                                                <div class="pull-right">
-                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Save</button>
-                                                    <!-- <input class="btn btn-primary ce5" type="submit" value="Continue"> -->
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
+                                                    <div class="pull-right">
+                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Сохранить</button>
+                                                 </div>
+                                             </div>
+                                         </form>
+                                     </div>
+                                 </div>
+                             </div>
+                             <!-- Таблица изменения пароля -->
+                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Change User password   <i class="fa fa-caret-down"></i></a>
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Изменить пароль<i class="fa fa-caret-down"></i></a>
                                     </h4>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
                                     <div class="row">
                                         <div class="easy2">
-                                            <h2>Change Password</h2>
+                                            <!-- <h2>Change Password</h2> -->
                                             <form class="form-horizontal" action="#">
                                                 <fieldset>
-                                                    <legend>Your Password</legend>
+                                                    <!-- <legend>Your Password</legend> -->
                                                     <div class="form-group required">
-                                                        <label class="col-sm-2 control-label">Password</label>
+                                                        <label class="col-sm-2 control-label">Пароль</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" type="password" placeholder="password">
                                                         </div>
                                                     </div>
                                                     <div class="form-group required">
-                                                        <label class="col-sm-2 control-label">Password Confirm</label>
+                                                        <label class="col-sm-2 control-label">Подтверждене пароля</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control" type="password" placeholder="password confirm">
                                                         </div>
@@ -153,20 +132,23 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                                 </fieldset>
                                                 <div class="buttons clearfix">
                                                     <div class="pull-left">
-                                                        <a class="btn btn-default ce5" href="#">Back</a>
+                                                        <a class="btn btn-default ce5" href="#">Назад</a>
                                                     </div>
                                                     <div class="pull-right">
-                                                       
-                                                        <input name="continue" class="btn btn-primary ce5" type="submit" value="Continue">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-<?php
-include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
-?>
+                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Сохранить</button>
+                                                 </div>
+                                             </div>
+                                         </form>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ <?php
+ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
+ ?>

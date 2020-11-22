@@ -1,3 +1,4 @@
+<!-- Удаление пользователя в админке из БД -->
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
 $page = "products";

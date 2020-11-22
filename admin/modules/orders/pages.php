@@ -1,19 +1,14 @@
 <?php
 /*
+пагинация на странице заказов в админке
 << < ..2|3|<b>4</b>|5|6.. > >>
 */
 // Устанавливаем соединение с базой данных
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/admin/configs/variables.php';
-// Переменная хранит число сообщений выводимых на станице
-$num = 5;
-// var_dump("$_GET['page']=". $_GET['page']);
-// $page = null;
 // Извлекаем из URL текущую страницу
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
-	// var_dump("page=". $page);
-
 } else {
 	$page = 1;
 }
@@ -22,7 +17,7 @@ $result = $conn->query("SELECT COUNT(*) FROM orders");
 $posts = mysqli_fetch_row($result);
 $posts = $posts[0];
 // Находим общее число страниц
-$total = intval(($posts - 1) / $num) + 1;
+$total = intval(($posts - 1) / $amount_orders) + 1;
 // Определяем начало сообщений для текущей страницы
 $page = intval($page);
 // Если значение $page меньше единицы или отрицательно
@@ -32,31 +27,25 @@ if(empty($page) or $page < 0) $page = 1;
 if($page > $total) $page = $total;
 // Вычисляем начиная к какого номера
 // следует выводить сообщения
-$start = $page * $num - $num;
-// Выбираем $num сообщений начиная с номера $start
-$result = $conn->query("SELECT * FROM orders LIMIT $start, $num");
+$start = $page * $amount_orders - $amount_orders;
+// Выбираем $amount_orders сообщений начиная с номера $start
+$result = $conn->query("SELECT * FROM orders LIMIT $start, $amount_orders");
 // В цикле переносим результаты запроса в массив $postrow
-// $amount = amount ();
-// var_dump($amount);
-$offset = ($page - 1) * $amount;
+$offset = ($page - 1) * $amount_orders;
 //Выводить только 6 товаров
-$sql = "SELECT * FROM orders LIMIT ". $amount ." OFFSET " . $offset;
+$sql = "SELECT * FROM orders LIMIT ". $amount_orders ." OFFSET " . $offset;
 $result = $conn->query($sql);
 ?>
-<!-- <div class="row" id="users"> -->
-	<?php
+<?php
 
-	while ($row = mysqli_fetch_assoc($result)) {
-		$sql = "SELECT * FROM users  WHERE id =" . $row['user_id'];
-		$user_id = $conn->query($sql);
-		$name = mysqli_fetch_assoc($user_id);
-		include $_SERVER['DOCUMENT_ROOT'] . '/admin/modules/orders/orders_tabl.php'; 
-	}
-
-// while ( $row[] = mysqli_fetch_assoc($result))
-	?>
+while ($row = mysqli_fetch_assoc($result)) {
+	$sql = "SELECT * FROM users  WHERE id =" . $row['user_id'];
+	$user_id = $conn->query($sql);
+	$name = mysqli_fetch_assoc($user_id);
+	include $_SERVER['DOCUMENT_ROOT'] . '/admin/modules/orders/orders_tabl.php'; 
+}
+?>
 </table>
-<!-- </div> -->
 <!-- переменные для страниц -->
 <?php
 $page_activ = null;

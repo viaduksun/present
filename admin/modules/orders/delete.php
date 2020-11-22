@@ -1,6 +1,6 @@
+<!-- Удаление заказа в админке из БД -->
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
-$page = "products";
 // кнопка нажата
 if (isset($_GET["delete"])) {
 	$sql = "DELETE FROM orders WHERE `orders`.`id` =" . $_GET['id'];
