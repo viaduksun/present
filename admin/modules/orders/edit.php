@@ -1,18 +1,15 @@
+<!-- Редактирование заказа в админке -->
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/admin/configs/variables.php';
 // кнопка нажата
 if (isset($_POST['save'])) {
-    // UPDATE `orders` SET `status` = 'В обработке' WHERE `orders`.`id` = 7;
     $sql = "UPDATE `orders` SET `status` = '". $_POST['status'] ."' WHERE `orders`.`id` =" . $_POST['order_id'];
     if ($conn->query($sql)) {
         header("location: /admin/pages/orders.php");
     } else {
         echo "Ошибка";
     }
-
 }
-$sum = 0;
 include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
 ?>
 <!-- pages-title-start -->
@@ -29,9 +26,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
     </div>
 </section>
 <!-- pages-title-end -->
-
 <!-- shopping-cart content section start -->
-
 <div class="shopping-cart-area s-cart-area">
     <div class="container">
         <div class="row">
@@ -43,6 +38,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                 $users = mysqli_fetch_assoc($conn->query("SELECT * FROM users WHERE id='" . $row['user_id'] . "'"));
                 $basket = json_decode($row['products'], true);
                 ?>
+                <!-- таблица информации о пользователе по заказу -->
                 <div class="row">
                     <div class="col-md-7 col-sm-12">
                         <div class="text">
@@ -110,7 +106,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                                 </div>
                                                 <div class="buttons clearfix">
                                                     <div class="form-row text-center">
-                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Save</button>
+                                                     <button name="save" value="1" type="submit" class="btn btn-primary ce5">Сохранить изменения</button>
                                                  </div>
                                              </div>
                                          </div>
@@ -120,12 +116,12 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                          </div>
                      </div>
                  </div>
+                 <!-- Информаци о товаре в заказе -->
                  <div class="col-md-5 col-sm-12">
                     <div class="ro-checkout-summary cart-card">
                         <div class="ro-title">
                             <h3 class="checkbox9 my-margin-bottom-0">ЗАКАЗ № <?php echo $row['id']?></h3>
                         </div>
-                        <!-- ЭТО КАРТОЧКА ТАКИХ БУДЕТ КАК В КУКИ -->
                         <?php
                         for ($i = 0; $i < count($basket['basket']); $i += 1){
                             $productSql = "SELECT * FROM products WHERE id = " . $basket['basket'][$i]['product_id'];
@@ -162,7 +158,6 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                             <?php
                         }
                         ?>
-                        <!-- ЭТО КАРТОЧКА ТАКИХ БУДЕТ КАК В КУКИ -->
                         <div class="ro-footer">
                             <div class="ro-title order-total">
                                 <p>

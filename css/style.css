@@ -88,7 +88,7 @@ hr.line {
   position: relative;
 }
 .section-padding{padding:90px 0;}
-.section-padding-top{padding-top:20px;}
+.section-padding-top{padding-top:90px;}
 .section-padding-bottom{padding-bottom:90px;}
 .d-table {
     display: table;
@@ -4736,7 +4736,7 @@ h2.page-title {
 }
 
 .link-height{
-	max-height: 250px;
+	height: 250px;
 	overflow: hidden;
 }
 .image-center{

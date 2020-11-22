@@ -10,7 +10,7 @@
 				} 
 				?>				
 			
-			<a href="single_product_page.php?productId=<?php echo $row['id'] ?>">				
+			<a href="/parts/shop/single_product_page.php?productId=<?php echo $row['id'] ?>">				
 				<img src="/img/products/<?php echo $row['image'] ?>"/>
 				<!-- <img class="secondary-image" alt="Product Title" src="/img/products/2.jpg"> -->
 			</a>

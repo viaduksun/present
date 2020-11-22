@@ -1,6 +1,5 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/configs/db.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/admin/configs/variables.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
 ?>
 <!-- pages-title-start -->
@@ -30,34 +29,31 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a class="collapsed  method" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Users Account Information<i class="fa fa-caret-down"></i></a>
+                                    <a class="collapsed  method" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Информация о пользователях<i class="fa fa-caret-down"></i></a>
                                 </h4>
                             </div>
-
-
-
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
                                 <div class="easy2">
-                                    <h2>Users Account Information</h2>
-                                    <div class="shop5">
+                                    <!-- <h2>Users Account Information</h2> -->
+                                    <!-- <div class="shop5">
                                         <label>Show :</label>
                                         <select class="select">
                                             <option value="5" selected>5</option>
                                             <option value="10">10</option>
                                             <option value="50">50</option>
                                         </select>      
-                                    </div>
+                                    </div> -->
                                     <table class="table table-bordered table-hover">
                                         <thead class="thead-dark">
                                             <tr>
                                                 <tr>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">NAME</th>
-                                                    <th scope="col">EMAIL</th>
-                                                    <th scope="col">VERIFIED</th>
-                                                    <th scope="col">CREATED_AT</th>
-                                                    <th scope="col">UPDATED_AT</th>
-                                                    <th scope="col">OPTIONS</th>
+                                                    <th class="text-center" scope="col">ID</th>
+                                                    <th class="text-center" scope="col">ФИО</th>
+                                                    <th class="text-center" scope="col">Email</th>
+                                                    <th class="text-center" scope="col">Верификация</th>
+                                                    <th class="text-center" scope="col">Дата регистрации</th>
+                                                    <th class="text-center" scope="col">Дата изменений</th>
+                                                    <th class="text-center" scope="col">Действия</th>
                                                 </tr>
                                             </tr>
                                         </thead>
@@ -65,16 +61,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/admin/parts/header.php';
                                         <?php
                                         include $_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/pages.php';
                                         ?>
-
-                                   <!--  <div class="buttons clearfix">
-                                        <div class="pull-left">
-                                            <a class="btn btn-default ce5" href="#">Back</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <input class="btn btn-primary ce5" type="submit" value="Continue">
-                                        </div>
-                                    </div> -->
-
+                                    <!-- </table> -->
                                 </div>
                             </div>
                         </div>
