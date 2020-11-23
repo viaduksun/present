@@ -325,8 +325,6 @@ function categorySelect(category) {
 // console.dir(category.dataset.prod_count);
 // console.dir(category.dataset.category_id);
 // console.dir(category);
-
-
 // выбираем все элементы с классом "current-cat" и запускаем цикл-функцию
 // которая либо добавит либо удалит текст(тот что в скобках) в классе искомых элементов
 document.querySelectorAll('.current-cat').forEach(function(item){
@@ -345,9 +343,7 @@ ajax.send("current_category_id=" + category.dataset.category_id);
 // console.dir(ajax);
 // console.dir(ajax.response);
 var response = ajax.response;
-
-
-// Выбираем ДИВ с карточками продуктов
+// Выбираем ДИВ с карточками продуктов и с пагинацией
 var productsBlock = document.querySelector("#shop_place_for_cards");
 // Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
   productsBlock.innerHTML = response;
@@ -397,3 +393,28 @@ var productsBlock = document.querySelector("#shop_place_for_cards");
 all.parentNode.className = "cat-item current-cat";
 // console.dir(response);
 }
+// Изменение режима отображения карточек 6/12/24
+function pagination_change(obj) {
+console.dir(obj);
+
+// Формируем AJAX 
+var ajax = new XMLHttpRequest();
+// Задаем характеристики ajax
+ajax.open("POST", siteURL + "parts/shop/select_pagination.php", false);
+// Метод XMLHttpRequest.setRequestHeader() устанавливает значения HTTP заголовков. так как не читался 'send'
+ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// Посылаем в $_GET - id категории для последующей обработки в sql запросе в select_category.php 
+ajax.send("current_limit=" + obj.value);
+
+// console.dir(ajax);
+// console.dir(ajax.response);
+var response = ajax.response;
+
+
+// Выбираем ДИВ с карточками продуктов
+var productsBlock = document.querySelector("#shop_place_for_cards");
+// Вставляем в этот ДИВ новую порцию продуктов (HTML который получили в AJAX response)
+productsBlock.innerHTML = response;
+}
+
+
