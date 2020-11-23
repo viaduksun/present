@@ -37,7 +37,11 @@
                                                         // =========================
                                                         // Настройка пагинации
                                                         // =========================
-                                                        if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];                                                        
+                                                        if(!isset($_GET['page'])) $page = 1; else $page = $_GET['page'];
+
+                                                        if (!isset($_COOKIE["current_limit"])) $limit = 6; else $limit = $_COOKIE["current_limit"];
+                                                              
+                                                                                          
                                                         // echo $length;
                                                         // ==================================================
                                                         if (isset($_COOKIE["cookie_current_category_id"])) {
@@ -46,7 +50,9 @@
                                                         $count_array = $count_query->fetch_array(MYSQLI_NUM);
                                                         $count = $count_array[0];
 
-                                                        $limit = 6;
+
+                                             
+
                                                         $start = ($page*$limit)-$limit;
                                                         $length = ceil($count/$limit);
                                                         $p = 1;
@@ -57,13 +63,12 @@
                                                             while ($row = mysqli_fetch_assoc($result)) {
                                                             include '../parts/shop/product_card.php';
                                                             }
-                                                            }  else { 
+                                                        }  else { 
                                                         // длина пагинации для всех товаров суммарно
                                                         $count_query = $conn->query("SELECT COUNT(*) FROM products");
                                                         $count_array = $count_query->fetch_array(MYSQLI_NUM);
                                                         $count = $count_array[0];
-
-                                                        $limit = 6;
+                                                        // $limit = 6;                                                            
                                                         $start = ($page*$limit)-$limit;
                                                         $length = ceil($count/$limit);
                                                         $p = 1;  
