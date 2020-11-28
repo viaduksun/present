@@ -1,12 +1,10 @@
 <?php
 
 // токен бота
-define('TELEGRAM_TOKEN', '1281425598:AAGSKbzWltuVDZhYO8XaXpvg8lnRu1uo5mg');
-
+define('TELEGRAM_TOKEN', '1455822037:AAEBAZqmtX7BUN3jmsBTywqUX01P8NGPIEA');
+  
 // внутренний айди
-define('TELEGRAM_CHATID', '391022978');
+define('TELEGRAM_CHATID', '1007659188');
 //   111111222
 
-//Привет, пробный тест на изменения.
-// Привет (Это Вадим)
 ?>

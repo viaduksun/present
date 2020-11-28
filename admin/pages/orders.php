@@ -3,16 +3,16 @@ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
 ?>
 <!-- pages-title-start -->
 <section class="contact-img-area">
-  <div class="container">
-    <div class="row">
-     <div class="col-md-12 text-center">
-      <div class="con-text">
-        <h2 class="page-title">Заказы</h2>
-        <p><a href="/admin/">Главная</a> | Заказы</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Заказы</h2>
+                    <p><a href="/admin/">Главная</a> | Заказы</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
 </section>
 <!-- pages-title-end -->
 <!-- my account content section start -->
@@ -34,12 +34,12 @@ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
                                 <div class="easy2">
                                     <!-- <h2>Orders Information</h2> -->
-                                    <!-- <div class="shop5">
+                                        <!-- <div class="shop5">
                                         <label>Кол-во на странице:</label>
                                         <select class="select">
-                                            <option value="5" selected>5</option>
-                                            <option value="10">10</option>
-                                            <option value="50">50</option>
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                        <option value="50">50</option>
                                         </select>      
                                     </div> -->
                                     <table class="table table-bordered table-hover">
@@ -61,7 +61,8 @@ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
                                         <?php
                                         include $_SERVER['DOCUMENT_ROOT'] . '/admin/modules/orders/pages.php';
                                         ?>
-                                    <!-- </table> -->
+                                        <!-- </table> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,9 +70,8 @@ include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/header.php"
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- my account  content section end -->
-<?php
-include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
-?>
+    </section>
+    <!-- my account  content section end -->
+    <?php
+    include $_SERVER["DOCUMENT_ROOT"] . "/admin/parts/footer.php"
+    ?>
